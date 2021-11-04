@@ -1,0 +1,423 @@
+﻿<!--[if IE ]><![endif]-->
+<!doctype html>
+<!--[if IE 8 ]> <html class="no-js lt-ie9 ie8" lang="zh-TW"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js lt-ie10 ie9" lang="zh-TW"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html class="no-js" lang="zh-TW" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!-- <meta http-equiv="X-UA-Compatible"content="IE=EmulateIE11"> -->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta http-equiv="content-language" content="zh-tw">
+    <meta name="title" content="上海商業儲蓄銀行｜處處為您著想">
+    <meta name="description" content="上海商業儲蓄銀行，秉持「處處為您著想」的服務理念，提供最親切、便捷的多元金融服務，包含企業金融、個人金融、台外幣存匯、財富管理、信用卡等多項服務。">
+    <meta name="Keywords" content="存款業務、放款業務、外匯業務、信託業務、國際金融服務及諮詢、應收帳款承購業務、外匯保證金交易、短期票劵、保管箱、代理業務、網路金流服務、代理基金銷售">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.scsb.com.tw/content/ind/index.jsp">
+    <meta property="og:image" content="https://www.scsb.com.tw/newscsbweb/content/images/ind_img/share/FB.jpg">
+    <meta property="og:description" content="上海商業儲蓄銀行，秉持「處處為您著想」的服務理念，提供最親切、便捷的多元金融服務，包含企業金融、個人金融、台外幣存匯、財富管理、信用卡等多項服務。">
+    <meta property="og:title" content="上海商業儲蓄銀行｜處處為您著想">
+    <title>上海商業儲蓄銀行</title>
+    <link rel="image_src" href="https://www.scsb.com.tw/newscsbweb/content/images/ind_img/share/FB.jpg">
+    <link href="favicon.ico" rel="shortcut icon">
+
+    <link rel="stylesheet" href="../styles/all.css">
+
+    
+
+    
+</head>
+<body id="activeCont"  data-nav-active-02 data-nav-active-02>
+    
+
+    <!--========== HEADER ==============-->
+    <header class="header fixed-top">
+        <button class="js-toggle-left-slidebar hamburger d-block d-lg-none" type="button"></button>
+        <div class="header-wrap" include-html="../common/template_header.html"></div>
+    </header>
+    <!--========== END Header ==========-->
+
+    <!--========== Loading =============-->
+    <div class="overlayMask open">
+        <div class="loader">
+            <!-- 如果要顯示無進度條的豆豆，把這段取消註解 -->
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <!-- 如果要顯示無進度條的豆豆，把這段取消註解 -->
+        </div>
+    </div>
+    <!--========== END Loading =========-->
+
+    <!--========== Content =============-->
+    <div canvas="container">
+        <div class="mainWrap">
+            <!-- KV -->
+            <div class="container-fluid px-0 kvWrap">
+                <div class="swiper-container" id="kv-slide">
+                    <div class="swiper-wrapper">
+                    	<th:block th:if="${!bannerList.empty}">
+	                        <div class="swiper-slide itemblk" th:each="banner:${bannerList}">
+	                            <a th:href="@{${banner.imageUrl}}" class="kv-link" title="開新視窗-嶄新的數位金融">&nbsp;</a>
+	                            <picture>
+	                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+	                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+	                                <img src="../images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask">
+	                            </picture>
+	                            <div class="kv-img d-none d-md-block" th:style="'background-image:url(' + @{${banner.image}} +')'" title="table、pc圖片"></div>
+								<div class="kv-img d-block d-lg-none" th:style="'background-image:url(' + @{${banner.imageMobile}} +')'" title="Mobile圖片"></div>
+	                        </div>
+                        </th:block>
+                        <th:block th:unless="${!bannerList.empty}">
+                        	<div class="swiper-slide itemblk">
+	                            <a href="ind_house.html" class="kv-link" title="開新視窗-嶄新的數位金融">&nbsp;</a>
+	                            <picture>
+	                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+	                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+	                                <img src="../images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask">
+	                            </picture>
+	                            <div class="kv-img d-block d-lg-none" style="background-image:url(../images/ind_img/home/kv-01-768.jpg)" title="Mobile圖片"></div>
+	                            <div class="kv-img d-none d-md-block" style="background-image:url(../images/ind_img/home/kv-01-1920_0.jpg)" title="table、pc圖片"></div>
+	                        </div>
+                        </th:block>
+                        <!-- <div class="swiper-slide itemblk">
+                            <a href="https://www.scsb.com.tw/content/cloudbank/index.html" class="kv-link" target="_blank" title="開新視窗-Cloud Bank by SCSB">&nbsp;</a>
+                            <picture>
+                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+                                <img src="../images/share/kv-mask-1920.png" alt="Cloud Bank by SCSB" class="imgMask">
+                            </picture>
+                            <div class="kv-img d-block d-lg-none" style="background-image:url(../images/main_kv/kv-04-768.jpg)" title="Mobile圖片"></div>
+                            <div class="kv-img d-none d-md-block" style="background-image:url(../images/main_kv/kv-04-1920_0.jpg)" title="table、pc圖片"></div>
+                        </div>
+                        <div class="swiper-slide itemblk">
+                            <a href="https://www.scsb.com.tw/content/news/news_081218.jsp" class="kv-link" target="_blank" title="開新視窗-上海商銀ATM外幣提款享">&nbsp;</a>
+                            <picture>
+                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+                                <img src="../images/share/kv-mask-1920.png" alt="上海商銀ATM外幣提款享" class="imgMask">
+                            </picture>
+                            <div class="kv-img d-block d-lg-none" style="background-image:url(../images/main_kv/kv-02-768.jpg)" title="Mobile圖片"></div>
+                            <div class="kv-img d-none d-md-block" style="background-image:url(../images/main_kv/kv-02-1920_0.jpg)" title="table、pc圖片"></div>
+                        </div>
+                        <div class="swiper-slide itemblk">
+                            <a href="https://www.scsb.com.tw/content/news/news_061102.jsp" class="kv-link" target="_blank" title="開新視窗-全球一路通">&nbsp;</a>
+                            <picture>
+                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+                                <img src="../images/share/kv-mask-1920.png" alt="全球一路通" class="imgMask">
+                            </picture>
+                            <div class="kv-img d-block d-lg-none" style="background-image:url(../images/main_kv/kv-03-768.jpg)" title="Mobile圖片"></div>
+                            <div class="kv-img d-none d-md-block" style="background-image:url(../images/main_kv/kv-03-1920_0.jpg)" title="table、pc圖片"></div>
+                        </div> -->
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="arroWrap r-bottom">
+                        <div class="arrPanel fixed-1200">
+                            <div class="panel-item d-none d-lg-block">
+                                <div class="swiper-button-prev" id="data-activity-kv-prev"></div>
+                            </div>
+                            <div class="panel-item swiper-pagination counter"></div>
+                            <div class="panel-item d-none d-lg-block">
+                                <div class="swiper-button-next" id="data-activity-kv-next"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wave Mask -->
+                    <div class="waveAnimate">
+                        <div class="ocean">
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End KV -->
+
+            <!-- Hot Key -->
+            <div class="container-fluid hotkeyWrap">
+                <div class="middleWrap fixed-1200">
+                    <div class="heading h3">大家都在用</div>
+                    <div class="row hotLister">
+                        <div class="col-4 col-lg"><a href="ind_house.jsp" class="hotList-link" title="開新視窗-房貸線上申請"><img on-image-load="" src="../images/ind_img/home/loan-home.svg" class="img-fluid imageLoaded" alt="房貸線上申請">房貸線上申請</a></div>
+                        <div class="col-4 col-lg"><a href="https://apply.scsb.com.tw/loan/client" class="hotList-link" title="開新視窗-信貸線上申請" target="_blank"><img on-image-load="" src="../images/ind_img/home/loan-people.svg" class="img-fluid imageLoaded" alt="信貸線上申請">信貸線上申請</a></div>
+                        <div class="col-4 col-lg"><a href="https://financing.scsb.com.tw/olnPb/housePricing/landing" class="hotList-link" target="_blank" title="開新視窗-房貸專人諮詢"><img on-image-load="" src="../images/ind_img/home/loan-home-service.svg" class="img-fluid imageLoaded" alt="房屋智能估價">房屋智能估價</a></div>
+                        <div class="col-4 col-lg"><a href="https://financing.scsb.com.tw/olnPb/pLoanTrial/landing" target="_blank" class="hotList-link" title="開新視窗-信貸專人諮詢"><img on-image-load="" src="../images/ind_img/home/loan-people-service.svg" class="img-fluid imageLoaded" alt="信貸線上試算">信貸線上試算</a></div>
+                        <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/netbank.portal?_nfpb=true&amp;_pageLabel=page_other17&amp;_nfls=false" class="hotList-link" target="_blank" title="開新視窗-貸款本息攤還試算"><img on-image-load="" src="../images/ind_img/home/calculator-money.svg" class="img-fluid imageLoaded" alt="開新視窗-貸款本息攤還試算">貸款本息攤還試算</a></div>
+                        <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/netbank.portal?_nfpb=true&amp;_pageLabel=page_other20&amp;_nfls=false" class="hotList-link" target="_blank" title="開新視窗-貸款總費用年百分率試算"><img on-image-load="" src="../images/ind_img/home/calculator-percent.svg" class="img-fluid imageLoaded" alt="貸款總費用年百分率試算">貸款總費用年百分率試算</a></div>
+                    </div>
+                    <div class="btnBlkWrap text-center"><a href="ind_house.jsp" title="看更多服務">看更多服務<span class="icon icon-arrow_forward arr"></span></a></div>
+                </div>
+            </div>
+            <!-- End Hot Key -->
+
+            <!-- Hot Service -->
+            <div class="container-fluid serviceWrap bg-light">
+                <div class="personal-service fixed-1200">
+                    <div class="swiper-container" id="servicelist-per-slide">
+                        <div class="heading h3">房屋貸款服務</div>
+                        <!-- Add Arrows -->
+                        <div class="arroWrap r-top">
+                            <div class="arrPanel fixed-1200">
+                                <div class="panel-item d-none d-lg-block">
+                                    <div class="swiper-button-prev" id="data-personal-prev"></div>
+                                </div>
+                                <div class="panel-item swiper-pagination counter"></div>
+                                <div class="panel-item d-none d-lg-block">
+                                    <div class="swiper-button-next" id="data-personal-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/ind_img/home/16-9@3x.jpg" class="card-img-top" alt="買房子">
+                                    <div class="card-body">
+                                        <h4 class="card-title">買房子</h4>
+                                        <p class="card-text">買房不再是未來夢想，將第一桶金化為第一間房</p>
+                                        <a href="ind_02_a1.jsp" class="stretched-link" title="買房子-銀行就在您的電腦裡">&nbsp;</a>                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/ind_img/home/16-10@3x.jpg" class="card-img-top" alt="理財週轉">
+                                    <div class="card-body">
+                                        <h4 class="card-title">理財週轉</h4>
+                                        <p class="card-text">彈性週轉，資金運用更靈活</p>
+                                        <a href="ind_03_a1.jsp" class="stretched-link" title="理財週轉-彈性週轉，資金運用更靈活">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/ind_img/home/16-11@3x.jpg" class="card-img-top" alt="保障型房貸">
+                                    <div class="card-body">
+                                        <h4 class="card-title">保障型房貸</h4>
+                                        <p class="card-text">結合上海銀行各種優質房貸與風險保障，讓房貸多一層保障</p>
+                                        <a href="ind_04_a1.jsp" class="stretched-link" title="保障型房貸-結合上海銀行各種優質房貸與風險保障，讓房貸多一層保障">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/ind_img/home/16-12@3x.jpg" class="card-img-top" alt="數位存款帳戶">
+                                    <div class="card-body">
+                                        <h4 class="card-title">房貸線上申請</h4>
+                                        <p class="card-text">提供您24小時申請貸款服務</p>
+                                        <a href="https://ibank.scsb.com.tw/share/FiduciaryLoanApply/begin.do?kind=house" target="_blank" class="stretched-link" title="開新視窗-房貸線上申請-提供您24小時申請貸款服務">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/16-9@3x.jpg" class="card-img-top" alt="網路銀行">
+                                    <div class="card-body">
+                                        <h4 class="card-title">網路銀行</h4>
+                                        <p class="card-text">銀行就在您的電腦裡</p>
+                                        <a href="dig05_a.jsp" class="stretched-link" title="網路銀行-銀行就在您的電腦裡">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid serviceWrap">
+                <div class="company-service fixed-1200">
+                    <div class="swiper-container" id="servicelist-com-slide">
+                        <div class="heading h3">個人信貸服務</div>
+                        <!-- Add Arrows -->
+                        <div class="arroWrap r-top">
+                            <div class="arrPanel fixed-1200">
+                                <div class="panel-item d-none d-lg-block">
+                                    <div class="swiper-button-prev" id="data-company-prev"></div>
+                                </div>
+                                <div class="panel-item swiper-pagination counter"></div>
+                                <div class="panel-item d-none d-lg-block">
+                                    <div class="swiper-button-next" id="data-company-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/ind_img/home/16-13@3x.jpg" class="card-img-top" alt="理財週轉">
+                                    <div class="card-body">
+                                        <h4 class="card-title">理財週轉</h4>
+                                        <p class="card-text">迅速便利的申請方案，隨時滿足資金需求</p>
+                                        <a href="ind_06_a1.jsp" class="stretched-link" title="迅速便利的申請方案，隨時滿足資金需求">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/ind_img/home/16-14@3x.jpg" class="card-img-top" alt="營運週轉">
+                                    <div class="card-body">
+                                        <h4 class="card-title">營運週轉</h4>
+                                        <p class="card-text">創業起步免擔心，幫您一起成就夢想藍圖</p>
+                                        <a href="ind_07_a1.jsp" class="stretched-link" title="營運週轉-創業起步免擔心，幫您一起成就夢想藍圖">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/ind_img/home/16-15@3x.jpg" class="card-img-top" alt="房屋整修">
+                                    <div class="card-body">
+                                        <h4 class="card-title">房屋整修</h4>
+                                        <p class="card-text">最高貸款額度NT$100萬元，減輕您的修繕費用負擔</p>
+                                        <a href="ind_08_a1.jsp" class="stretched-link" title="房屋整修-最高貸款額度NT$100萬元，減輕您的修繕費用負擔">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/ind_img/home/16-16@3x.jpg" class="card-img-top" alt="信貸線上申請">
+                                    <div class="card-body">
+                                        <h4 class="card-title">信貸線上申請</h4>
+                                        <p class="card-text">提供您24小時申請貸款服務</p>
+                                        <a href="ind_personal.jsp" target="_blank" class="stretched-link" title="開新視窗-信貸線上申請-提供您24小時申請貸款服務">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/16-9@3x.jpg" class="card-img-top" alt="網路銀行">
+                                    <div class="card-body">
+                                        <h4 class="card-title">網路銀行</h4>
+                                        <p class="card-text">銀行就在您的電腦裡</p>
+                                        <a href="dig05_a.jsp" class="stretched-link" title="網路銀行-銀行就在您的電腦裡">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Hot Service -->
+
+            <!-- Event -->
+            <div class="container-fluid eventWrap bg-light">
+                <div class="middleWrap fixed-1200">
+                    <div class="heading h3">最新訊息</div>
+                    <div class="row align-items-center event-box">
+                        <div class="col-12 col-lg-6 col-xl-5 px-0 px-lg-2 px-xl-4">
+
+                            <div class="swiper-container" id="event-slide">
+                                <div class="arroWrap r-top pt-3 pr-0 pr-lg-3 pr-xl-4">
+                                    <div class="arrPanel fixed-1200">
+                                        <div class="panel-item d-none d-lg-block">
+                                            <div class="swiper-button-prev" id="data-event-prev"></div>
+                                        </div>
+                                        <div class="panel-item swiper-pagination counter"></div>
+                                        <div class="panel-item d-none d-lg-block">
+                                            <div class="swiper-button-next" id="data-event-next"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-wrapper event-slideBlk">
+                                	<th:block th:if="${!adList.empty}">
+	                                    <div class="swiper-slide eventItem" th:each="ad:${adList}">
+	                                        <div class="card">
+	                                            <img on-image-load th:src="@{${ad.image}}" alt="全球一路通 企業網銀搶用中‧防疫免出門 金融服務送進門" class="img-fluid w-100">
+	                                            <a th:href="@{${ad.imageUrl}}" class="stretched-link" title="全球一路通 企業網銀搶用中‧防疫免出門 金融服務送進門"></a>
+	                                            <div class="card-overlay">
+	                                                <div class="date" th:text="${#dates.format(ad.createTime, 'YYYY/MM/dd')}">2020/03/05</div>
+	                                                <div class="card-text bold" th:text="${ad.title}">全球一路通 企業網銀搶用中‧防疫免出門 金融服務送進門</div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+                                    </th:block>
+                                    <th:block th:unless="${!adList.empty}">
+                                    	<div class="swiper-slide eventItem">
+	                                        <div class="card">
+	                                            <img on-image-load src="../images/ind_img/news/news_01.png" alt="上海銀行卡友輕鬆貸，超低優惠利率前三期年利率1.88%起" class="img-fluid w-100">
+	                                            <a href="https://www.scsb.com.tw/content/news/news_090306.jsp" class="stretched-link" title="上海銀行卡友輕鬆貸，超低優惠利率前三期年利率1.88%起"></a>
+	                                            <div class="card-overlay">
+	                                                <div class="date">2020/03/06</div>
+	                                                <div class="card-text bold">上海銀行卡友輕鬆貸，超低優惠利率前三期年利率1.88%起</div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+                                    </th:block>
+<!--                                     <div class="swiper-slide eventItem"> -->
+<!--                                         <div class="card"> -->
+<!--                                             <img on-image-load src="../images/ind_img/news/news_01.png" alt="上海銀行卡友輕鬆貸，超低優惠利率前三期年利率1.88%起" class="img-fluid w-100"> -->
+<!--                                             <a href="https://www.scsb.com.tw/content/news/news_090306.jsp" class="stretched-link" title="上海銀行卡友輕鬆貸，超低優惠利率前三期年利率1.88%起"></a> -->
+<!--                                             <div class="card-overlay"> -->
+<!--                                                 <div class="date">2020/03/06</div> -->
+<!--                                                 <div class="card-text bold">上海銀行卡友輕鬆貸，超低優惠利率前三期年利率1.88%起</div> -->
+<!--                                             </div> -->
+<!--                                         </div> -->
+<!--                                     </div> -->
+<!--                                     <div class="swiper-slide eventItem"> -->
+<!--                                         <div class="card"> -->
+<!--                                             <img on-image-load src="../images/ind_img/news/news_02.jpg" alt="上海商銀幸福貸回家，超低利率1.58%起" class="img-fluid w-100"> -->
+<!--                                             <a href="https://www.scsb.com.tw/content/scsb_happiness_production/index.html" class="stretched-link" target="_blank" title="上海商銀幸福貸回家，超低利率1.58%起"></a> -->
+<!--                                             <div class="card-overlay"> -->
+<!--                                                 <div class="date">2020/05/04</div> -->
+<!--                                                 <div class="card-text bold">上海商銀幸福貸回家，超低利率1.58%起</div> -->
+<!--                                             </div> -->
+<!--                                         </div> -->
+<!--                                     </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 col-xl-7 px-0 px-xl-3">
+                            <div class="event-lister">
+                            	<th:block th:if="${!newsList.empty}">
+	                                <a th:each="news:${newsList}" href="../../../content/news/news_090630.html" class="item-link">
+	                                	<span class="date" th:text="${#dates.format(news.createTime, 'YYYY/MM/dd')}">2020/06/30</span>[[${news.title}]]
+	                                </a>
+                                </th:block>
+                                <th:block th:unless="${!newsList.empty}">
+									<a href="../ind/ind_06_j1.jsp" class="item-link"><span class="date">2020/07/03</span>「上銀薪轉快易貸專案」利率1.88%起，歡迎本行薪轉戶員工線上申辦，或請洽全行營業單位辦理。</a>
+                                	<a href="https://www.scsb.com.tw/content/news/news_090306.jsp" class="item-link"><span class="date">2020/03/06</span>上海銀行卡友輕鬆貸，超低優惠利率前三期年利率1.88%起</a>
+                                	<a href="https://www.scsb.com.tw/content/news/news_090220.jsp" class="item-link"><span class="date">2020/02/19</span>【公告】嚴重特殊傳染性肺炎之個人金融產品債務協處機制</a>
+                                </th:block>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btnBlkWrap text-center"><a href="https://www.scsb.com.tw/content/news/news02.jsp" class="btn btn-gdt-link">查看更多訊息</a></div>
+                </div>
+            </div>
+            <!-- End Event -->
+        </div>
+        <!--========== Footer ==========-->
+        <footer class="footer" include-html="../common/template_footer.html"></footer>
+        <!--========== END Footer ======-->
+    </div>
+    <!--========== END Content =========-->
+
+    <!--========== Mobile Menu =========-->
+    <div off-canvas="slidebar-1 left overlay" class="sidemenuWrap" include-html="../common/template_mobile_menu.html"></div>
+    <!--========== END Mobile Menu =====-->
+
+    <!--========== Scroll Top ==========-->
+    <div class="js-back-to-top back-to-top" include-html="../common/back-to-top.html"></div>
+    <!--========== END Scroll Top ======-->
+
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/bootstrap-toolkit.min.js"></script>
+    <script src="../scripts/jquery.matchHeight-min.js"></script>
+    <script src="../scripts/animate.js"></script>
+    <script src="../scripts/includeExternalHtml.js"></script>
+    <script src="../scripts/swiper.min.js"></script>
+    <script src="../scripts/slidebars.js"></script>
+    <script src="../scripts/loadingProgress.js"></script>
+    <script src="../scripts/picturefill.min.js"></script>
+    <script src="../scripts/jquery.back-to-top.js"></script>
+    <script src="../scripts/main.js"></script>
+    
+</body>
+
+</html>

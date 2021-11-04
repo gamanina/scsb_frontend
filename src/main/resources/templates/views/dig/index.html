@@ -1,0 +1,374 @@
+﻿<!--[if IE ]><![endif]-->
+<!doctype html>
+<!--[if IE 8 ]> <html class="no-js lt-ie9 ie8" lang="zh-TW"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js lt-ie10 ie9" lang="zh-TW"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html class="no-js" lang="zh-TW" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!-- <meta http-equiv="X-UA-Compatible"content="IE=EmulateIE11"> -->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta http-equiv="content-language" content="zh-tw">
+    <meta name="title" content="上海商業儲蓄銀行｜處處為您著想">
+    <meta name="description" content="上海商業儲蓄銀行，秉持「處處為您著想」的服務理念，提供最親切、便捷的多元金融服務，包含企業金融、個人金融、台外幣存匯、財富管理、信用卡等多項服務。">
+    <meta name="Keywords" content="存款業務、放款業務、外匯業務、信託業務、國際金融服務及諮詢、應收帳款承購業務、外匯保證金交易、短期票劵、保管箱、代理業務、網路金流服務、代理基金銷售">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.scsb.com.tw/newscsbweb/content/dig/index.html">
+    <meta property="og:image" content="https://www.scsb.com.tw/newscsbweb/content/images/dig_img/share/FB.jpg">
+    <meta property="og:description" content="上海商業儲蓄銀行，秉持「處處為您著想」的服務理念，提供最親切、便捷的多元金融服務，包含企業金融、個人金融、台外幣存匯、財富管理、信用卡等多項服務。">
+    <meta property="og:title" content="上海商業儲蓄銀行｜處處為您著想">
+    <title>上海商業儲蓄銀行</title>
+    <link rel="image_src" href="https://www.scsb.com.tw/newscsbweb/content/images/dig_img/share/FB.jpg">
+    <link href="favicon.ico" rel="shortcut icon">
+
+    <link rel="stylesheet" href="../styles/all.css">
+
+    
+
+    
+</head>
+<body id="activeCont" data-nav-active-06>
+    
+
+    <!--========== HEADER ==============-->
+    <header class="header fixed-top">
+        <button class="js-toggle-left-slidebar hamburger d-block d-lg-none" type="button"></button>
+        <div class="header-wrap" include-html="../common/template_header.html"></div>
+    </header>
+    <!--========== END Header ==========-->
+
+    <!--========== Loading =============-->
+    <div class="overlayMask open">
+        <div class="loader">
+            <!-- 如果要顯示無進度條的豆豆，把這段取消註解 -->
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <!-- 如果要顯示無進度條的豆豆，把這段取消註解 -->
+        </div>
+    </div>
+    <!--========== END Loading =========-->
+
+    <!--========== Content =============-->
+    <div canvas="container">
+        <div class="mainWrap">
+            <!-- KV -->
+            <div class="container-fluid px-0 kvWrap">
+                <div class="swiper-container" id="kv-slide">
+                    <div class="swiper-wrapper">
+                    	<th:block th:if="${!bannerList.empty}">
+	                        <div class="swiper-slide itemblk" th:each="banner:${bannerList}">
+	                            <a th:href="@{${banner.imageUrl}}" class="kv-link" title="開新視窗-嶄新的數位金融">&nbsp;</a>
+	                            <picture>
+	                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+	                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+	                                <img src="../images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask">
+	                            </picture>
+	                            <div class="kv-img d-none d-md-block" th:style="'background-image:url(' + @{${banner.image}} +')'" title="table、pc圖片"></div>
+								<div class="kv-img d-block d-lg-none" th:style="'background-image:url(' + @{${banner.imageMobile}} +')'" title="Mobile圖片"></div>
+	                        </div>
+                        </th:block>
+                        <th:block th:unless="${!bannerList.empty}">
+                        	<div class="swiper-slide itemblk">
+	                            <a href="dig23.1_a.html" class="kv-link" title="開新視窗-嶄新的數位金融">&nbsp;</a>
+	                            <picture>
+	                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+	                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+	                                <img src="../images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask">
+	                            </picture>
+	                            <div class="kv-img d-block d-lg-none" style="background-image:url(../images/dig_img/home/kv-01-768.jpg)" title="Mobile圖片"></div>
+	                            <div class="kv-img d-none d-md-block" style="background-image:url(../images/dig_img/home/kv-01-1920_0.jpg)" title="table、pc圖片"></div>
+	                        </div>
+                        </th:block>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="arroWrap r-bottom">
+                        <div class="arrPanel fixed-1200">
+                            <div class="panel-item d-none d-lg-block">
+                                <div class="swiper-button-prev" id="data-activity-kv-prev"></div>
+                            </div>
+                            <div class="panel-item swiper-pagination counter"></div>
+                            <div class="panel-item d-none d-lg-block">
+                                <div class="swiper-button-next" id="data-activity-kv-next"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wave Mask -->
+                    <div class="waveAnimate">
+                        <div class="ocean">
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End KV -->
+
+            <!-- Hot Key -->
+            <div class="container-fluid hotkeyWrap">
+                <div class="middleWrap fixed-1200">
+                    <div class="heading h3">大家都在用</div>
+                    <div class="row hotLister">
+                        <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/netbank.portal?_nfpb=true&_pageLabel=page_other12&_nfls=false" class="hotList-link" target="_blank" title="開新視窗-當日外匯匯率"><img on-image-load src="../images/dig_img/home/exchange-rate.svg" class="img-fluid" alt="當日外匯匯率">當日外匯匯率</a></div>
+                        <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/netbank.portal?_nfpb=true&_pageLabel=page_other08&_nfls=false" class="hotList-link" target="_blank" title="開新視窗-台幣利率查詢"><img on-image-load src="../images/dig_img/home/interest-rate.svg" class="img-fluid" alt="台幣利率查詢">台幣利率查詢</a></div>
+                        <div class="col-4 col-lg"><a href="https://apply.scsb.com.tw/openaccount/client/" class="hotList-link" target="_blank" title="開新視窗-線上開戶"><img on-image-load src="../images/dig_img/home/online-member.svg" class="img-fluid" alt="線上開戶">線上開戶</a></div>
+                        <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/share/FiduciaryLoanApply/begin.do?kind=personal" target="_blank" class="hotList-link" title="開新視窗-信貸申請"><img on-image-load src="../images/dig_img/home/loan-people.svg" class="img-fluid" alt="信貸申請">信貸申請</a></div>
+                        <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/share/FiduciaryLoanApply/begin.do?kind=ONEGO" class="hotList-link" target="_blank" title="開新視窗-一碼GO申請"><img on-image-load src="../images/dig_img/home/go-apply.svg" class="img-fluid" alt="開新視窗-一碼GO申請">一碼GO申請</a></div>
+                        <div class="col-4 col-lg"><a href="https://www.scsb.com.tw/content/about/about05_d.html" class="hotList-link" target="_blank" title="開新視窗-ATM據點"><img on-image-load src="../images/dig_img/home/atm.svg" class="img-fluid" alt="ATM據點">ATM據點</a></div>
+                    </div>
+                    <div class="btnBlkWrap text-center"><a href="dig/dig23.1_a.html" title="開新視窗-看更多服務">看更多服務<span class="icon icon-arrow_forward arr"></span></a></div>
+                </div>
+            </div>
+            <!-- End Hot Key -->
+
+            <!-- Hot Service -->
+            <div class="container-fluid serviceWrap bg-light">
+                <div class="personal-service fixed-1200">
+                    <div class="swiper-container" id="servicelist-per-slide">
+                        <div class="heading h3">個人熱門服務</div>
+                        <!-- Add Arrows -->
+                        <div class="arroWrap r-top">
+                            <div class="arrPanel fixed-1200">
+                                <div class="panel-item d-none d-lg-block">
+                                    <div class="swiper-button-prev" id="data-personal-prev"></div>
+                                </div>
+                                <div class="panel-item swiper-pagination counter"></div>
+                                <div class="panel-item d-none d-lg-block">
+                                    <div class="swiper-button-next" id="data-personal-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/dig_img/home/16-9@3x.jpg" class="card-img-top" alt="網路銀行">
+                                    <div class="card-body">
+                                        <h4 class="card-title">網路銀行</h4>
+                                        <p class="card-text">銀行就在您的電腦裡</p>
+                                        <a href="dig/dig05_a.html" class="stretched-link" title="網路銀行-銀行就在您的電腦裡">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/dig_img/home/16-10@3x.jpg" class="card-img-top" alt="行動網銀">
+                                    <div class="card-body">
+                                        <h4 class="card-title">行動銀行</h4>
+                                        <p class="card-text">透過手機輕鬆管理銀行帳戶</p>
+                                        <a href="dig/dig26.1_a.html" class="stretched-link" title="行動銀行-透過手機輕鬆管理銀行帳戶">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/dig_img/home/16-11@3x.jpg" class="card-img-top" alt="台灣Pay">
+                                    <div class="card-body">
+                                        <h4 class="card-title">台灣Pay</h4>
+                                        <p class="card-text">QR Code行動支付，讓您生活更便利</p>
+                                        <a href="dig/dig16_a.html" class="stretched-link" title="台灣Pay-QRCode行動支付，讓您生活更便利">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/dig_img/home/16-12@3x.jpg" class="card-img-top" alt="數位存款帳戶">
+                                    <div class="card-body">
+                                        <h4 class="card-title">數位存款帳戶</h4>
+                                        <p class="card-text">數位存款帳戶，線上開戶e指通</p>
+                                        <a href="dig/dig27_a.html" class="stretched-link" title="數位存款帳戶-數位存款帳戶，線上開戶e指通">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/dig_img/home/16-9@3x.jpg" class="card-img-top" alt="網路銀行">
+                                    <div class="card-body">
+                                        <h4 class="card-title">網路銀行</h4>
+                                        <p class="card-text">銀行就在您的電腦裡</p>
+                                        <a href="dig05_a.html" class="stretched-link" title="網路銀行-銀行就在您的電腦裡">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid serviceWrap">
+                <div class="company-service fixed-1200">
+                    <div class="swiper-container" id="servicelist-com-slide">
+                        <div class="heading h3">企業熱門服務</div>
+                        <!-- Add Arrows -->
+                        <div class="arroWrap r-top">
+                            <div class="arrPanel fixed-1200">
+                                <div class="panel-item d-none d-lg-block">
+                                    <div class="swiper-button-prev" id="data-company-prev"></div>
+                                </div>
+                                <div class="panel-item swiper-pagination counter"></div>
+                                <div class="panel-item d-none d-lg-block">
+                                    <div class="swiper-button-next" id="data-company-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/dig_img/home/16-13@3x.jpg" class="card-img-top" alt="全球一路通">
+                                    <div class="card-body">
+                                        <h4 class="card-title">全球一路通</h4>
+                                        <p class="card-text">企業管理資金的好夥伴</p>
+                                        <a href="dig/dig08_a.html" class="stretched-link" title="全球一路通-企業管理資金的好夥伴">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/dig_img/home/16-14@3x.jpg" class="card-img-top" alt="台灣Pay收款">
+                                    <div class="card-body">
+                                        <h4 class="card-title">台灣Pay收款</h4>
+                                        <p class="card-text">在地頭家必備，輕鬆收款最速配</p>
+                                        <a href="dig/dig18_a.html" class="stretched-link" title="台灣Pay收款-在地頭家必備，輕鬆收款最速配">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/dig_img/home/16-15@3x.jpg" class="card-img-top" alt="一碼GO整合收款">
+                                    <div class="card-body">
+                                        <h4 class="card-title">一碼GO整合收款</h4>
+                                        <p class="card-text">太多Pay嗎？只要一個 QR Code，隨便掃、任你Pay</p>
+                                        <a href="dig/dig19_a.html" class="stretched-link" title="一碼GO整合收款-太多Pay嗎？只要一個 QR Code，隨便掃、任你Pay">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/dig_img/home/16-16@3x.jpg" class="card-img-top" alt="Pukii代收寶">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Pukii代收寶</h4>
+                                        <p class="card-text">繳費通路all in one，企業收款沒煩惱</p>
+                                        <a href="dig/dig13_a.html" class="stretched-link" title="Pukii代收寶-繳費通路，企業收款沒煩惱">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-slide cardItem">
+                                <div class="card">
+                                    <img on-image-load src="../images/dig_img/home/16-9@3x.jpg" class="card-img-top" alt="網路銀行">
+                                    <div class="card-body">
+                                        <h4 class="card-title">網路銀行</h4>
+                                        <p class="card-text">銀行就在您的電腦裡</p>
+                                        <a href="dig05_a.html" class="stretched-link" title="網路銀行-銀行就在您的電腦裡">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Hot Service -->
+
+            <!-- Event -->
+            <div class="container-fluid eventWrap bg-light">
+                <div class="middleWrap fixed-1200">
+                    <div class="heading h3">最新訊息</div>
+                    <div class="row align-items-center event-box">
+                        <div class="col-12 col-lg-6 col-xl-5 px-0 px-lg-2 px-xl-4">
+
+                            <div class="swiper-container" id="event-slide">
+                                <div class="arroWrap r-top pt-3 pr-0 pr-lg-3 pr-xl-4">
+                                    <div class="arrPanel fixed-1200">
+                                        <div class="panel-item d-none d-lg-block">
+                                            <div class="swiper-button-prev" id="data-event-prev"></div>
+                                        </div>
+                                        <div class="panel-item swiper-pagination counter"></div>
+                                        <div class="panel-item d-none d-lg-block">
+                                            <div class="swiper-button-next" id="data-event-next"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-wrapper event-slideBlk">
+                                	<th:block th:if="${!adList.empty}">
+	                                    <div class="swiper-slide eventItem" th:each="ad:${adList}">
+	                                        <div class="card">
+	                                            <img on-image-load th:src="@{${ad.image}}" alt="全球一路通 企業網銀搶用中‧防疫免出門 金融服務送進門" class="img-fluid w-100">
+	                                            <a th:href="@{${ad.imageUrl}}" class="stretched-link" title="全球一路通 企業網銀搶用中‧防疫免出門 金融服務送進門"></a>
+	                                            <div class="card-overlay">
+	                                                <div class="date" th:text="${#dates.format(ad.createTime, 'YYYY/MM/dd')}">2020/03/05</div>
+	                                                <div class="card-text bold" th:text="${ad.title}">全球一路通 企業網銀搶用中‧防疫免出門 金融服務送進門</div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+                                    </th:block>
+                                    <th:block th:unless="${!adList.empty}">
+                                    	<div class="swiper-slide eventItem">
+	                                        <div class="card">
+	                                            <img on-image-load src="../images/dig_img/news/news_02.jpg" alt="全球一路通 企業網銀搶用中‧防疫免出門 金融服務送進門" class="img-fluid w-100">
+	                                            <a href="https://www.scsb.com.tw/content/news/news_090305.html" class="stretched-link" title="全球一路通 企業網銀搶用中‧防疫免出門 金融服務送進門"></a>
+	                                            <div class="card-overlay">
+	                                                <div class="date">2020/03/05</div>
+	                                                <div class="card-text bold">全球一路通 企業網銀搶用中‧防疫免出門 金融服務送進門</div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+                                    </th:block>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 col-xl-7 px-0 px-xl-3">
+                            <div class="event-lister">
+                            	<th:block th:if="${!newsList.empty}">
+	                                <a th:each="news:${newsList}" href="../../../content/news/news_090630.html" class="item-link">
+	                                	<span class="date" th:text="${#dates.format(news.createTime, 'YYYY/MM/dd')}">2020/06/30</span>[[${news.title}]]
+	                                </a>
+                                </th:block>
+                                <th:block th:unless="${!newsList.empty}">
+                                	<a href="../../../content/news/news_090630.html" class="item-link"><span class="date">2020/06/30</span>振興券用上銀台灣Pay 享加碼回饋禮及新戶首刷禮600元</a>
+                                	<a href="../../../content/news/news_090319-3.html" class="item-link"><span class="date">2020/03/19</span>上海商銀台灣Pay新戶優惠。</a>
+                                	<a href="https://www.scsb.com.tw/content/news/news_090319-1.html" class="item-link"><span class="date">2020/03/19</span>為響應「口罩實名制2.0」全民防疫政策，本行自109年3月19日起辦理「ATM轉帳購買口罩免手續費」活動。</a>
+                                </th:block>
+							</div>
+                        </div>
+                    </div>
+                    <div class="btnBlkWrap text-center"><a href="https://www.scsb.com.tw/content/news/news02.html" class="btn btn-gdt-link">查看更多訊息</a></div>
+                </div>
+            </div>
+            <!-- End Event -->
+        </div>
+        <!--========== Footer ==========-->
+        <footer class="footer" include-html="../common/template_footer.html"></footer>
+        <!--========== END Footer ======-->
+    </div>
+    <!--========== END Content =========-->
+
+    <!--========== Mobile Menu =========-->
+    <div off-canvas="slidebar-1 left overlay" class="sidemenuWrap" include-html="../common/template_mobile_menu.html"></div>
+    <!--========== END Mobile Menu =====-->
+
+    <!--========== Scroll Top ==========-->
+    <div class="js-back-to-top back-to-top" include-html="../common/back-to-top.html"></div>
+    <!--========== END Scroll Top ======-->
+
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/bootstrap-toolkit.min.js"></script>
+    <script src="../scripts/jquery.matchHeight-min.js"></script>
+    <script src="../scripts/animate.js"></script>
+    <script src="../scripts/includeExternalHtml.js"></script>
+    <script src="../scripts/swiper.min.js"></script>
+    <script src="../scripts/slidebars.js"></script>
+    <script src="../scripts/loadingProgress.js"></script>
+    <script src="../scripts/picturefill.min.js"></script>
+    <script src="../scripts/jquery.back-to-top.js"></script>
+    <script src="../scripts/main.js"></script>
+    
+</body>
+
+</html>
