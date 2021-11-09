@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" xmlns:th="http://www.thymeleaf.org">
+<head th:include="views/common/head :: head"></head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+		<ul th:include="views/common/sidebar :: sidebar" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"></ul>
+		<!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+				<nav th:include="views/common/navbar :: navbar" class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"></nav>
+                <!-- End of Topbar -->
+
+
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0">管理者表單</h1>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-12 mb-4">
+
+                            <div class="card shadow mb-4">
+                                <div class="card-header">
+                                    <div class="navbar">
+                                        <h6 class="m-0 font-weight-bold">表單紀錄列表</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-4">
+                                        <form id="sForm" method="post" th:object="${allSheetForm}">
+                                            <div class="card-unit card-unit-table">
+                                                <div class="row align-items-center">
+                                                    <div class="col-lg-3">
+                                                        <div class="outsideInp">
+                                                            <label for="">表單申請日期</label>
+                                                            <div class="input-group date">
+                                                                <input id="fromNodate" class="form-control" type="text" th:field="*{strDate}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="symbol butterfly" style="margin-top: 20px;"> ～ </span>
+                                                    <div class="col-lg-3">
+                                                        <div class="outsideInp">
+                                                            <label for="">　</label>
+                                                            <div class="input-group date">
+                                                                <input id="toNodate" class="form-control" type="text" th:field="*{endDate}" required>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-5">
+                                                        <label for="titlename">申請人</label>
+                                                        <input type="text" class="form-control" id="titlename" placeholder="" th:field="*{applicant}">
+                                                    </div>
+
+                                                    <div class="col-lg-3">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <label for="">表單名稱</label>
+                                                                <select class="form-control" id="" th:field="*{tableName}">
+                                                                	<option value="">請選擇</option>
+                                                                	<option th:each="type:${type}" th:value="${type.key}">[[${type.value}]]</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <label for="">表單狀態</label>
+                                                                <select class="form-control" id=""  th:field="*{status}">
+                                                                    <option value="">請選擇</option>
+                                                                    <option th:each="status:${status}" th:value="${status.key}">[[${status.value}]]</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-lg-6">
+                                                        <a href="#" class="btn btn-next" style="margin-top: 32px;" onclick="submit()">
+                                                            查詢
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         </form>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-12 card-table table-responsive">
+                                    <th:block th:if="${sheetList ==null || sheetList.size == 0 }">
+                                    	<span>[[${msg}]]</span>
+                                    </th:block>
+                                    
+                                        <table id="example" class="table table-bordered text-center display" style="width:100%" th:if="${sheetList !=null && sheetList.size > 0 }">
+                                            <thead>
+                                                <tr>
+                                                    <td class="table-title">表單名稱</td>
+                                                    <td class="table-summary">表單摘要</td>
+                                                    <td>申請人</td>
+                                                    <td>申請日期</td>
+                                                    <td>狀態</td>
+                                                    <td>查看</td>
+                                                </tr>
+                                            </thead>
+                                            
+                                            <tbody>
+                                                <tr th:each="sheet:${sheetList}">
+                                                    <td class="table-title" th:text="${type.get(sheet.type)}">本行公告申請</td>                                                    
+                                                    <td class="table-summary">
+                                                        <span>標題：[[${sheet.title}]] </span>
+                                       					 刊登時間：[[${#dates.format(sheet.onTime, 'YYYY/MM/dd HH:mm:ss')}]] ～ [[${#dates.format(sheet.offTime, 'YYYY/MM/dd HH:mm:ss')}]]
+                                                    </td>
+                                                    <td >[[${sheet.applicant}]]（[[${sheet.applicantId}]]）</td>
+                                                    <td th:text="${#dates.format(sheet.createTime, 'YYYY/MM/dd HH:mm')}">2021/03/10 07:26</td>
+                                                    <td th:classappend="${sheet.status.equals('0') ? 'status-processing': sheet.status.equals('1') ? 'status-passed': sheet.status.equals('2') || sheet.status.equals('3') ? 'status-returned':''}"  th:text="${status.get(sheet.status)}">已通過</td>
+                                                    <td class="table-edit"><a th:href="${'detail?'+'sheet_id='+sheet.id}"><i class="fas fa-edit" ></i></a></td>
+                                                </tr>                                                
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+<footer th:include="views/common/footer :: footer"></footer>
+
+    <script>
+        // datatables
+        $(document).ready(function() {
+            $('#example').DataTable({
+                "pageLength": 10
+            });
+        });
+        
+        function preview(){
+//         	document.forms['sForm'].target = '_blank';
+//         	// 需要修改的地方
+//         	document.forms['sForm'].action = '/previewBusinessAd';
+//         	document.forms['sForm'].submit();
+        }
+
+        function submit(){
+         	document.forms['sForm'].target = '_self';
+        	document.forms['sForm'].action = 'searchList';
+        	document.forms['sForm'].submit();
+        }
+    </script>
+</body>
+
+</html>

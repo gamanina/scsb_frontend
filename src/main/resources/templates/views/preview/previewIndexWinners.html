@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>review-enterprise-index-winners-首頁 - 中獎名單</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/preview.css}">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <img th:src="@{/assets/img/header.png}" alt="">
+        </div>
+
+        <div class="banner">
+            <img th:src="${image}" alt="">
+            <p th:text="*{content}" ></p>
+<!--             banner img -->
+        </div>
+
+        <div class="footer">
+            <img th:src="@{/assets/img/curve.png}" alt="">
+            <img th:src="@{/assets/img/body.png}" alt="">
+            
+        </div>
+    </div>
+</body>
+</html>

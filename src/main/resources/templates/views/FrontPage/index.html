@@ -26,7 +26,7 @@
     <link rel="image_src" href="https://www.scsb.com.tw/newscsbweb/content/images/card_img/share/FB.jpg">
     <link href="favicon.ico" rel="shortcut icon">
 
-    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="styles/all.css">
 
     
 
@@ -38,7 +38,7 @@
     <!--========== HEADER ==============-->
     <header class="header fixed-top">
         <button class="js-toggle-left-slidebar hamburger d-block d-lg-none" type="button"></button>
-        <div class="header-wrap" include-html="../common/template_header.html"></div>
+        <div class="header-wrap" include-html="common/template_header.html"></div>
     </header>
     <!--========== END Header ==========-->
 
@@ -56,9 +56,9 @@
 	                        <div class="swiper-slide itemblk" th:each="banner:${indexBannerList}">
 	                            <a th:href="@{${banner.imageUrl}}" class="kv-link" title="官網全新改版上線">&nbsp;</a>
 	                            <picture>
-	                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
-	                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
-	                                <img src="../images/share/kv-mask-1920.png" alt="精采多樣的信用卡" class="imgMask">
+	                                <source srcset="images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+	                                <source srcset="images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+	                                <img src="images/share/kv-mask-1920.png" alt="精采多樣的信用卡" class="imgMask">
 	                            </picture>
 	                            <div class="kv-img d-none d-md-block" th:style="'background-image:url(' + @{${banner.image}} +')'" title="table、pc圖片"></div>
 								<div class="kv-img d-block d-lg-none" th:style="'background-image:url(' + @{${banner.imageMobile}} +')'" title="Mobile圖片"></div>
@@ -69,11 +69,11 @@
                         <div class="swiper-slide itemblk">
                             <a href="#!" class="kv-link disabled" title="官網全新改版上線">&nbsp;</a>
                             <picture>
-                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
-                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
-                                <img src="../images/share/kv-mask-1920.png" alt="精采多樣的信用卡" class="imgMask"></picture>
-                            <div class="kv-img d-block d-lg-none" style="background-image:url(../images/FrontPage_img/home/page-banner-index-m@2x.jpg)" title="Mobile圖片"></div>
-                            <div class="kv-img d-none d-md-block" style="background-image:url(../images/FrontPage_img/home/page-banner-index@2x.jpg)" title="table、pc圖片"></div>
+                                <source srcset="images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+                                <source srcset="images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+                                <img src="images/share/kv-mask-1920.png" alt="精采多樣的信用卡" class="imgMask"></picture>
+                            <div class="kv-img d-block d-lg-none" style="background-image:url(images/FrontPage_img/home/page-banner-index-m@2x.jpg)" title="Mobile圖片"></div>
+                            <div class="kv-img d-none d-md-block" style="background-image:url(images/FrontPage_img/home/page-banner-index@2x.jpg)" title="table、pc圖片"></div>
                         </div>
                         </th:block>
                     </div>
@@ -106,14 +106,14 @@
                 <div class="middleWrap fixed-1200">
                     <div class="heading h3">線上櫃台</div>
                     <div class="row hotLister">
-                        <div class="col-4 col-lg"><a href="https://apply.scsb.com.tw/openaccount/client" class="hotList-link" target="_blank" title="開新視窗-數位帳戶開戶" ><img on-image-load src="../images/FrontPage_img/home/icons-red-online-member.svg" class="img-fluid" alt="數位帳戶開戶">數位帳戶開戶</a></div>
-                        <div class="col-4 col-lg"><a href="https://apply.scsb.com.tw/card/credit_card/contact" class="hotList-link" ttarget="_blank" itle="信開新視窗-用卡線上申請" ><img on-image-load src="../images/FrontPage_img/home/icons-red-card-apply.svg" class="img-fluid" alt="信用卡線上申請">信用卡線上申請</a></div>
-                        <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/share/OnlineCardOpen/begin.do#" class="hotList-link" target="_blank" title="開新視窗-線上開卡" ><img on-image-load src="../images/FrontPage_img/home/icons-red-card-open.svg" class="img-fluid" alt="線上開卡">線上開卡</a></div>
-                        <div class="col-4 col-lg"><a href="https://financing.scsb.com.tw/olnSb/index" class="hotList-link" target="_blank" title="開新視窗-微企e智貸"><img on-image-load src="../images/FrontPage_img/home/icons-red-loan-business.svg" class="img-fluid" alt="微企e智貸">微企e智貸</a></div>
-                        <div class="col-4 col-lg"><a href="https://apply.scsb.com.tw/loan/client/" class="hotList-link" target="_blank" title="開新視窗-信貸線上申請"><img on-image-load src="../images/FrontPage_img/home/icons-red-loan-people.svg" class="img-fluid" alt="信貸線上申請">信貸線上申請</a></div>
-                        <div class="col-4 col-lg"><a href="https://eatm.scsb.com.tw/sap/index.htm" class="hotList-link" target="_blank" title="開新視窗-便利繳費網"><img on-image-load src="../images/FrontPage_img/home/icons-red-pay.svg" class="img-fluid" alt="便利繳費網">便利繳費網</a></div>
+                        <div class="col-4 col-lg"><a href="https://apply.scsb.com.tw/openaccount/client" class="hotList-link" target="_blank" title="開新視窗-數位帳戶開戶" ><img on-image-load src="images/FrontPage_img/home/icons-red-online-member.svg" class="img-fluid" alt="數位帳戶開戶">數位帳戶開戶</a></div>
+                        <div class="col-4 col-lg"><a href="https://apply.scsb.com.tw/card/credit_card/contact" class="hotList-link" ttarget="_blank" itle="信開新視窗-用卡線上申請" ><img on-image-load src="images/FrontPage_img/home/icons-red-card-apply.svg" class="img-fluid" alt="信用卡線上申請">信用卡線上申請</a></div>
+                        <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/share/OnlineCardOpen/begin.do#" class="hotList-link" target="_blank" title="開新視窗-線上開卡" ><img on-image-load src="images/FrontPage_img/home/icons-red-card-open.svg" class="img-fluid" alt="線上開卡">線上開卡</a></div>
+                        <div class="col-4 col-lg"><a href="https://financing.scsb.com.tw/olnSb/index" class="hotList-link" target="_blank" title="開新視窗-微企e智貸"><img on-image-load src="images/FrontPage_img/home/icons-red-loan-business.svg" class="img-fluid" alt="微企e智貸">微企e智貸</a></div>
+                        <div class="col-4 col-lg"><a href="https://apply.scsb.com.tw/loan/client/" class="hotList-link" target="_blank" title="開新視窗-信貸線上申請"><img on-image-load src="images/FrontPage_img/home/icons-red-loan-people.svg" class="img-fluid" alt="信貸線上申請">信貸線上申請</a></div>
+                        <div class="col-4 col-lg"><a href="https://eatm.scsb.com.tw/sap/index.htm" class="hotList-link" target="_blank" title="開新視窗-便利繳費網"><img on-image-load src="images/FrontPage_img/home/icons-red-pay.svg" class="img-fluid" alt="便利繳費網">便利繳費網</a></div>
                     </div>
-                    <div class="btnBlkWrap text-center"><a href="../eservice/ecounter.jsp" title="看更多線上服務">看更多線上服務<span class="icon icon-arrow_forward arr"></span></a></div>
+                    <div class="btnBlkWrap text-center"><a href="eservice/ecounter.jsp" title="看更多線上服務">看更多線上服務<span class="icon icon-arrow_forward arr"></span></a></div>
                 </div>
             </div>
             <!-- End Hot Key -->
@@ -132,7 +132,7 @@
                             <div class="annBotNav">
                                 <a href="https://ibank.scsb.com.tw/netbank.portal?_nfpb=true&_pageLabel=page_other12&_nfls=false" target="_blank" title="開新視窗-完整匯率表" class="navLink">完整匯率表</a>
                                 <a href="https://ibank.scsb.com.tw/netbank.portal?_nfpb=true&_pageLabel=portlet_other38&_nfls=false" target="_blank" title="開新視窗-換匯試算" class="navLink">換匯試算</a>
-                                <a href="../dig/dig25.1_a.jsp" title="利率查詢" class="navLink">利率查詢</a>
+                                <a href="dig/dig25.1_a.jsp" title="利率查詢" class="navLink">利率查詢</a>
                             </div>
                         </div>
                         <div class="col-md-6 annItem announceList">
@@ -223,12 +223,12 @@
                                         <div class="mainBox">
                                             <div class="row helpContWrap">
                                                 <div class="col-sm-5">
-                                                    <img src="../images/FrontPage_img/home/img-s-001@2x.jpg" class="img-fluid imgCol" alt="企業融資好幫手">
+                                                    <img src="images/FrontPage_img/home/img-s-001@2x.jpg" class="img-fluid imgCol" alt="企業融資好幫手">
                                                 </div>
                                                 <div class="col-sm-7">
                                                     <div class="list-group downloadLister">
-                                                        <a href="../bus/bus02_a.jsp" class="list-item" title="一般企業貸款" data-format-link>一般企業貸款</a>
-                                                        <a href="../bus/bus02_g.jsp" class="list-item" title="中小企業融資諮詢窗口" data-format-link>中小企業融資諮詢窗口</a>
+                                                        <a href="bus/bus02_a.jsp" class="list-item" title="一般企業貸款" data-format-link>一般企業貸款</a>
+                                                        <a href="bus/bus02_g.jsp" class="list-item" title="中小企業融資諮詢窗口" data-format-link>中小企業融資諮詢窗口</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -248,7 +248,7 @@
                                         <div class="mainBox">
                                             <div class="row helpContWrap">
                                                 <div class="col-sm-5">
-                                                    <img src="../images/FrontPage_img/home/img-s-002@2x.jpg" class="img-fluid imgCol" alt="微企創業不是夢">
+                                                    <img src="images/FrontPage_img/home/img-s-002@2x.jpg" class="img-fluid imgCol" alt="微企創業不是夢">
                                                 </div>
                                                 <div class="col-sm-7">
                                                     <div class="list-group downloadLister">
@@ -274,11 +274,11 @@
                                         <div class="mainBox">
                                             <div class="row helpContWrap">
                                                 <div class="col-sm-5">
-                                                    <img src="../images/FrontPage_img/home/img-s-003@2x.jpg" class="img-fluid imgCol" alt="買房購屋打拼族">
+                                                    <img src="images/FrontPage_img/home/img-s-003@2x.jpg" class="img-fluid imgCol" alt="買房購屋打拼族">
                                                 </div>
                                                 <div class="col-sm-7">
                                                     <div class="list-group downloadLister">
-                                                        <a href="../ind/ind_house.jsp" class="list-item" title="房貸線上申請" data-format-link>房貸線上申請</a>
+                                                        <a href="ind/ind_house.jsp" class="list-item" title="房貸線上申請" data-format-link>房貸線上申請</a>
                                                         <a href="https://apply.scsb.com.tw/loan/client/" class="list-item" target="_blank" title="開新視窗-信貸線上申請" data-format-link>信貸線上申請</a>
                                                     </div>
                                                 </div>
@@ -300,7 +300,7 @@
                                         <div class="mainBox">
                                             <div class="row helpContWrap">
                                                 <div class="col-sm-5">
-                                                    <img src="../images/FrontPage_img/home/img-s-004@2x.jpg" class="img-fluid imgCol" alt="聰明消費更省錢">
+                                                    <img src="images/FrontPage_img/home/img-s-004@2x.jpg" class="img-fluid imgCol" alt="聰明消費更省錢">
                                                 </div>
                                                 <div class="col-sm-7">
                                                     <div class="list-group downloadLister">
@@ -326,7 +326,7 @@
                                         <div class="mainBox">
                                             <div class="row helpContWrap">
                                                 <div class="col-sm-5">
-                                                    <img src="../images/FrontPage_img/home/img-s-005@2x.jpg" class="img-fluid imgCol" alt="投資保險早規劃">
+                                                    <img src="images/FrontPage_img/home/img-s-005@2x.jpg" class="img-fluid imgCol" alt="投資保險早規劃">
                                                 </div>
                                                 <div class="col-sm-7">
                                                     <div class="list-group downloadLister">
@@ -352,12 +352,12 @@
                                         <div class="mainBox">
                                             <div class="row helpContWrap">
                                                 <div class="col-sm-5">
-                                                    <img src="../images/FrontPage_img/home/img-s-006@2x.jpg" class="img-fluid imgCol" alt="退休生活更輕鬆">
+                                                    <img src="images/FrontPage_img/home/img-s-006@2x.jpg" class="img-fluid imgCol" alt="退休生活更輕鬆">
                                                 </div>
                                                 <div class="col-sm-7">
                                                     <div class="list-group downloadLister">
-                                                        <a href="../link/link10_09.jsp" class="list-item" title="傳家寶信託" data-format-link>傳家寶信託</a>
-                                                        <a href="../link/link10_08.jsp" class="list-item" title="高齡者身心障礙者信託" data-format-link>高齡者身心障礙者信託</a>
+                                                        <a href="link/link10_09.jsp" class="list-item" title="傳家寶信託" data-format-link>傳家寶信託</a>
+                                                        <a href="link/link10_08.jsp" class="list-item" title="高齡者身心障礙者信託" data-format-link>高齡者身心障礙者信託</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -378,11 +378,11 @@
                     <div class="row promotionCol">
                         <div class="col-md-6 proItem py-3">
                             <div class="heading h3">數位世代向前行</div>
-                            <a href="http://qrservice.scsb.com.tw/" title="開新視窗-上海銀行行動網銀APP" target="_blank"><img src="../images/FrontPage_img/home/photo-16-10@2x.jpg" alt="上海銀行行動網銀APP" class="imgCor img-fluid"></a>
+                            <a href="http://qrservice.scsb.com.tw/" title="開新視窗-上海銀行行動網銀APP" target="_blank"><img src="images/FrontPage_img/home/photo-16-10@2x.jpg" alt="上海銀行行動網銀APP" class="imgCor img-fluid"></a>
                         </div>
                         <div class="col-md-6 proItem py-3">
                             <div class="heading h3">焦點訊息</div>
-                            <a href="news/link18.jsp" title="新冠肺炎紓困振興專區"><img src="../images/FrontPage_img/home/photo-16-11@2x.jpg" alt="新冠肺炎紓困振興專區" class="imgCor img-fluid"></a>
+                            <a href="news/link18.jsp" title="新冠肺炎紓困振興專區"><img src="images/FrontPage_img/home/photo-16-11@2x.jpg" alt="新冠肺炎紓困振興專區" class="imgCor img-fluid"></a>
                         </div>
                     </div>
                 </div>
@@ -394,7 +394,7 @@
                 <div class="middleWrap fixed-1200">
                     <div class="heading h3">公益與永續經營</div>
                     <div class="d-flex csrInt">
-                        <div class="item"><img src="../images/FrontPage_img/home/photo-image-1-1-o@2x.png" alt="*" class="img-fluid"></div>
+                        <div class="item"><img src="images/FrontPage_img/home/photo-image-1-1-o@2x.png" alt="*" class="img-fluid"></div>
                         <div class="item">
                             4月2日台鐵408車次太魯閣號於花蓮大清水隧道發生重大事故，本行與
                             上銀文教基金會合捐新台幣600萬元予「衛生福利部賑災專戶」，並指
@@ -407,31 +407,31 @@
             <!-- End 公益與永續經營 -->
         </div>
         <!--========== Footer ==========-->
-        <footer class="footer" include-html="../common/template_footer.html"></footer>
+        <footer class="footer" include-html="common/template_footer.html"></footer>
         <!--========== END Footer ======-->
     </div>
     <!--========== END Content =========-->
 
     <!--========== Mobile Menu =========-->
-    <div off-canvas="slidebar-1 left overlay" class="sidemenuWrap" include-html="../common/template_mobile_menu.html"></div>
+    <div off-canvas="slidebar-1 left overlay" class="sidemenuWrap" include-html="common/template_mobile_menu.html"></div>
     <!--========== END Mobile Menu =====-->
 
     <!--========== Scroll Top ==========-->
-    <div class="js-back-to-top back-to-top" include-html="../common/back-to-top.html"></div>
+    <div class="js-back-to-top back-to-top" include-html="common/back-to-top.html"></div>
     <!--========== END Scroll Top ======-->
 
-    <script src="../scripts/jquery.min.js"></script>
-    <script src="../scripts/bootstrap.bundle.min.js"></script>
-    <script src="../scripts/bootstrap-toolkit.min.js"></script>
-    <script src="../scripts/jquery.matchHeight-min.js"></script>
-    <script src="../scripts/animate.js"></script>
-    <script src="../scripts/includeExternalHtml.js"></script>
-    <script src="../scripts/swiper.min.js"></script>
-    <script src="../scripts/slidebars.js"></script>
-    <script src="../scripts/loadingProgress.js"></script>
-    <script src="../scripts/picturefill.min.js"></script>
-    <script src="../scripts/jquery.back-to-top.js"></script>
-    <script src="../scripts/main.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="scripts/bootstrap-toolkit.min.js"></script>
+    <script src="scripts/jquery.matchHeight-min.js"></script>
+    <script src="scripts/animate.js"></script>
+    <script src="scripts/includeExternalHtml.js"></script>
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/slidebars.js"></script>
+    <script src="scripts/loadingProgress.js"></script>
+    <script src="scripts/picturefill.min.js"></script>
+    <script src="scripts/jquery.back-to-top.js"></script>
+    <script src="scripts/main.js"></script>
     
 </body>
 

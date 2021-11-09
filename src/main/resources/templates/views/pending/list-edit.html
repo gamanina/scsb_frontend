@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SCSB-application-list-edit</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link th:href="@{/css/sb-admin-2.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand" th:href="@{SCSB-home-announce.html}">
+                <!-- <div class="sidebar-brand-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">統計業務系統</div> -->
+                <img class="logo" th:src="@{/img/logo.png}" alt="">
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider sidebar-divider-header">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                提交表單
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="fas fa-folder"></i>
+                    <span>頁面</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">首頁：</h6>
+                        <a class="collapse-item" th:href="@{SCSB-home-announce.html}">本行公告</a>
+                        <a class="collapse-item" th:href="@{SCSB-home-news.html}">最新活動</a>
+                        <a class="collapse-item" th:href="@{SCSB-home-banner.html}">廣告輪播</a>
+                        <a class="collapse-item" th:href="@{SCSB-home-prize.html}">中獎名單</a>
+
+                        <h6 class="collapse-header">企業金融：</h6>
+                        <a class="collapse-item" href="#">廣告輪播</a>
+                        <a class="collapse-item" th:href="@{SCSB-ad.html}">廣告</a>
+
+                        <h6 class="collapse-header">個人金融：</h6>
+                        <a class="collapse-item" href="#">廣告輪播</a>
+                        <a class="collapse-item" href="#">廣告</a>
+
+                        <h6 class="collapse-header">台外幣存匯：</h6>
+                        <a class="collapse-item" href="#">廣告輪播</a>
+                        <a class="collapse-item" href="#">廣告</a>
+
+                        <h6 class="collapse-header">數位金融：</h6>
+                        <a class="collapse-item" href="#">廣告輪播</a>
+                        <a class="collapse-item" href="#">廣告</a>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                表單管理
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{SCSB-application-list.html}">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>待核表單</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{SCSB-application-history.html}">
+                    <i class="fas fa-clipboard-list"></i>
+                    <span>表單紀錄</span>
+                </a>
+            </li>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600">王家衛</span>
+                                <i class="far fa-user-circle"></i>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    登出
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0">待核表單</h1>
+                    </div>
+
+                    <div class="formWizard">
+                        <ul class="nav">
+                            <li class="active">
+                                <i class="fas fa-edit"></i>
+                                <p>
+                                    經辦
+                                </p>
+                            </li>
+                            <li class="active">
+                                <div class="nav-wedge"></div>
+                                <i class="fas fa-user-check"></i>
+                                <p>
+                                    主管 B
+                                </p>
+                            </li>
+                            <li>
+                                <div class="nav-wedge"></div>
+                                <i class="fas fa-user-check"></i>
+                                <p>
+                                    主管 A
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-12 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header">
+                                    <div class="navbar">
+                                        <h6 class="m-0 font-weight-bold">本行公告申請</h6>
+
+                                        <a href="#" class="btn btn-download btn-icon-split">
+                                            <span class="text">預覽</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row ml-0 mr-0">
+                                        <div class="col-lg-12 card-table">
+                                            <p>
+                                                申請人： <span>王家衛</span>
+                                            </p>
+                                            <p>
+                                                申請單位： <span>2021/03/10 07:26</span> ｜ 申請單位：<span>紓困振興專案受理處</span>
+                                            </p>
+                                            <p>
+                                                刊登時間： <span>2021/03/21 07:00:00 ～ 2021/04/21 19:00:00</span>
+                                            </p>
+                                            <p>
+                                                版面： <span>數位金融</span>
+                                            </p>
+                                            <p>
+                                                標題： <span>公告修正本行「進口、出口及匯兌各項業務之收費標準」及國際金融業務分行「各項業務費用收費標準」，並自110年05月10日起實施。</span>
+                                            </p>
+                                            <p class="announcement">
+                                                公告內容：
+                                                <ul>
+                                                    <li>
+                                                        ・圖檔 <a href="#">news_0128phone_1</a>
+                                                    </li>
+                                                    <li>
+                                                        ・圖檔連結 <a href="#">https://www.scsb.com.tw/content/news/news_100201.jsp</a>
+                                                    </li>
+                                                    <li>
+                                                        ・附檔 <a href="#">「進口、出口及匯兌各項業務之收費標準」 修訂前後對照表</a>
+                                                    </li>
+                                                </ul>
+                                                親愛的客戶您好: <br><br>
+                                                一、為新增及調整部份條款內容，本行修訂「金錢信託開戶及各項服務約定書」(約定書編號:10907T→11004T)，並自110年4月14日起適用。<br>
+                                                二、本次修訂「金錢信託開戶及各項服務約定書」之「壹、上海商業儲蓄銀行特定金錢信託投資有價證券約定條款」及「貳、上海商業儲蓄銀行指定集合管理運用金錢信託契約」(修訂內容詳如下列「金錢信託開戶及各項服務約定書11004T(修訂對照)」)，辦理特定金錢信託投資國內外有價證券及信託資金集合管理運用業務之委託人，如不同意上開變更事項者，請於變更生效日前通知本行辦理契約終止；逾期未向本行表示異議者，即視為承認。 <br><br>
+                                                特此公告！！
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12 mb-4">
+
+                            <div class="card shadow mb-4">
+                                <div class="card-header">
+                                    <div class="navbar">
+                                        <h6 class="m-0 font-weight-bold">簽核意見</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row ml-0 mr-0">
+                                        <div class="col-lg-12 card-table">
+                                            <div class="card-select">
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <label for="">您的下一層簽核人員</label>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <select class="form-control" id="">
+                                                                <option>陳亨利</option>
+                                                                <option>陳亨利</option>
+                                                                <option>陳亨利</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>
+                                                    簽核意見附檔
+                                                    <span style="color: #B82B22">註：（文字待確認）/ 若有多檔案請打包壓縮成同一筆</span>
+                                                </label>
+                                                <br>
+                                                <div class="fileUpload btn btn-upload btn-icon-split">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                    <span class="text">上傳</span>
+                                                    <input id="uploadBtn" type="file" class="upload">
+                                                </div>
+                                                <input class="fileUpload" id="uploadFile" placeholder="未選擇任何檔案" disabled="disabled">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="titlename">簽核意見</label>
+                                                
+                                                <textarea class="form-control" rows="20" id="" placeholder="">文字部分修正，將 3 月份最新表格更新，如示意圖
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="btnNext">
+                        <a href="#" class="btn btn-previous">
+                            <span class="">回前一頁</span>
+                        </a>
+                        <a href="#" class="btn btn-return">
+                            <span class="">預覽</span>
+                        </a>
+                        <a href="#" class="btn btn-next">
+                            <span class="">核准</span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/style.js"></script>
+
+</body>
+
+</html>

@@ -30,6 +30,6 @@ public class BusController
 		model.addAttribute("bannerList", bannerList);
 		model.addAttribute("newsList", newsList);
 		model.addAttribute("adList", adList);
-		return "views/dig/index";
+		return "views/bus/index";
 	}
 }
