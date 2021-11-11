@@ -41,209 +41,277 @@
 
 </head>
 
-<body id="activeCont"  data-nav-active-04>
-    
+<body id="activeCont" data-nav-active-04>
 
-    <!--========== HEADER ==============-->
-    <header class="header fixed-top">
-        <button class="js-toggle-left-slidebar hamburger d-block d-lg-none" type="button"></button>
-        <div class="header-wrap" include-html="common/template_header.html"></div>
-    </header>
-    <!--========== END Header ==========-->
 
-    <!--========== Loading =============-->
-    <div class="overlayMask _open">
-        <div class="loader">
-            <!-- 如果要顯示無進度條的豆豆，把這段取消註解 -->
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <!-- 如果要顯示無進度條的豆豆，把這段取消註解 -->
-        </div>
-    </div>
-    <!--========== END Loading =========-->
+	<!--========== HEADER ==============-->
+	<header class="header fixed-top">
+		<button class="js-toggle-left-slidebar hamburger d-block d-lg-none"
+			type="button"></button>
+		<div class="header-wrap" include-html="common/template_header.html"></div>
+	</header>
+	<!--========== END Header ==========-->
 
-    <!--========== Content =============-->
-    <div canvas="container">
-        <div class="mainWrap">
-            <div class="container-fluid">
-                <div class="middleWrap fixed-1200">
-                    <div class="row">
-                        <div class="col-3 leftCol d-none d-lg-block">
-                            <!-- 內頁左側選單 -->
-                            <div class="leftCol_menu" include-html="common/announcement_left_menu.html"></div>
-                        </div>
-                        <div class="col-12 col-lg-9 rightCol">
-                            <ol class="breadcrumb d-none d-lg-flex" aria-label="麵包屑" data-menu-indexer data-ly-a="A01" data-ly-b="B01" data-ly-c="C01">
-                                <li class="accesskey"><a accesskey="C" href="sitemap.jsp" id="accesskey-c" title="中央主內容區塊">:::</a></li>
-                                <li class="breadcrumb-item"><a href="https://www.scsb.com.tw/" target="_blank" title="開新視窗-上海商業銀行首頁"><span class="icon-home2"></span></a></li>
-                                <li class="breadcrumb-item"><a href="#!" class="disabled">公告/活動/中獎名單</a></li>
-                                <li class="breadcrumb-item active">[[${listTitle}]]</li>
-                            </ol>
-                            <div class="inner-kv">
-                                <div class="inner-kv-wrap">
-                                    <div class="inner-kv-img">
-                                        <div class="sharebar d-flex justify-content-end">
-                                            <div class="shareNav d-flex align-items-center">
-<!--                                                 <div class="item">分享：</div> -->
-<!--                                                 <div class="item"><a href="javascript:void(0);" class="fb" title="Facebook分享" onclick="shareThisPage('fb')"><img src="images/fb.svg" class="img-fluid" alt="Facebook分享"></a></div> -->
-<!--                                                 <div class="item"><a href="javascript:void(0);" class="line" title="LINE分享" onclick="shareThisPage('line')"><img src="images/line.svg" class="img-fluid" alt="Line分享"></a></div> -->
-<!--                                                 <div class="item d-none d-lg-block"><a href="javascript:void(0);" class="favorite" title="加入收藏"><span>收藏</span></a></div> -->
-<!--                                                 <div class="item d-none"><a href="javascript:void(0);" class="favorite-mb" title="加入收藏"><span>收藏</span></a></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="inner-mask announceKv" style="background: url(images/news_img/inner_kv/banner-note@2x.jpg) no-repeat right center/cover;">
-                                            <img on-image-load src="../images/share/inner-kv-mask-1024.png" class="img-fluid" alt="*">
-                                        </div>
-                                    </div>
-                                    <div class="inner-kv-slogan d-flex align-items-sm-center">
-                                        <div class="inner-kv-item">
-                                            <div class="title h2">[[${listTitle}]]</div>
-                                            <div class="wording"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mainBox">
-                                <div class="category_select">
-                                    <div class="form_wrap">
-<!--                                         <div class="form-group form-row align-items-center mb-0"> -->
-<!--                                             <div class="col-12 col-lg-auto pb-2 pb-lg-0"> -->
-<!--                                                 <span class="labeltitle">請選擇分類</span> -->
-<!--                                             </div> -->
-<!--                                             <div class="col-12 col-lg-4"> -->
-<!--                                                 <select class="custom-select" id="downloadTypeList"  onchange="filterTabBySelector(this)"> -->
-<!--                                                     <option value="" selected="selected">全部</option> -->
-<!--                                                     <option value="bank">銀行資訊</option> -->
-<!--                                                     <option value="bus">企業金融</option> -->
-<!--                                                     <option value="ind">個人金融</option> -->
-<!--                                                     <option value="dep">台外幣存匯</option> -->
-<!--                                                     <option value="card">信用卡</option> -->
-<!--                                                     <option value="fund">財富管理</option> -->
-<!--                                                     <option value="dig">數位金融</option> -->
-<!--                                                 </select> -->
-<!--                                             </div> -->
-<!--                                         </div> -->
-                                    </div>
-                                </div>
-                                <th:block th:if="${!detailList.empty}">
-                                <div class="list-group downloadLister announceList" id="downloadTypeListTarget" th:each="detail:${detailList}">
-                                    <div data-type-tag="bank">
-                                        <a href="#!" class="list-item" title="防範詐騙關懷提醒">
-                                            
-                                            <div class="rCol" ><figure class="annInfo"><span class="date" th:text="${#dates.format(detail.createTime, 'YYYY/MM/dd')}">2021/07/07</span><div th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${detail.id})} + '\''">[[${detail.title}]]</div></figure></div>
-                                        </a>
-                                    </div>
-<!--                                     <div data-type-tag="bus"> -->
-<!--                                         <a href="#!" class="list-item" title="防範詐騙關懷提醒"> -->
-<!--                                             <div class="lCol"><figure class="annTag bus">企業<br>金融</figure></div> -->
-<!--                                             <div class="rCol"><figure class="annInfo"><span class="date">2021/07/06</span>1111防範詐騙關懷提醒</figure></div> -->
-<!--                                         </a> -->
-<!--                                     </div> -->
-<!--                                     <div data-type-tag="ind"> -->
-<!--                                         <a href="#!" class="list-item" title="轉帳限額大升級!!"> -->
-<!--                                             <div class="lCol"><figure class="annTag ind">個人<br>金融</figure></div> -->
-<!--                                             <div class="rCol"><figure class="annInfo"><span class="date">2021/07/05</span>轉帳限額大升級!!</figure></div> -->
-<!--                                         </a> -->
-<!--                                     </div> -->
-<!--                                     <div data-type-tag="dep"> -->
-<!--                                         <a href="#!" class="list-item" title="公告新版【新臺幣存款開戶及各項服務約定書】，並自110年6月30日起正式啟用。"> -->
-<!--                                             <div class="lCol"><figure class="annTag dep">台外幣<br>存匯</figure></div> -->
-<!--                                             <div class="rCol"><figure class="annInfo"><span class="date">2021/07/05</span>公告新版【新臺幣存款開戶及各項服務約定書】，並自110年6月30日起正式啟用。</figure></div> -->
-<!--                                         </a> -->
-<!--                                     </div> -->
-<!--                                     <div data-type-tag="card"> -->
-<!--                                         <a href="#!" class="list-item" title="#Cloud bank 新卡面，LIKE賺摳摳 最高獎金NT$1萬元喔!"> -->
-<!--                                             <div class="lCol"><figure class="annTag cdcard">信用卡</figure></div> -->
-<!--                                             <div class="rCol"><figure class="annInfo"><span class="date">2021/07/05</span>#Cloud bank 新卡面，LIKE賺摳摳 最高獎金NT$1萬元喔!</figure></div> -->
-<!--                                         </a> -->
-<!--                                     </div> -->
-<!--                                     <div data-type-tag="fund"> -->
-<!--                                         <a href="#!" class="list-item" title="財富管理財富管理財富管理財富管理財富管理財富管理財富管理財富管理"> -->
-<!--                                             <div class="lCol"><figure class="annTag fund">財富<br>管理</figure></div> -->
-<!--                                             <div class="rCol"><figure class="annInfo"><span class="date">2021/06/25</span>財富管理財富管理財富管理財富管理財富管理財富管理財富管理財富管理</figure></div> -->
-<!--                                         </a> -->
-<!--                                     </div> -->
-<!--                                     <div data-type-tag="dig"> -->
-<!--                                         <a href="#!" class="list-item" title="標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題最多四十個字"> -->
-<!--                                             <div class="lCol"><figure class="annTag dig">數位<br>金融</figure></div> -->
-<!--                                             <div class="rCol"><figure class="annInfo"><span class="date">2021/06/19</span>標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題最多四十個字</figure></div> -->
-<!--                                         </a> -->
-<!--                                     </div> -->
-<!--                                     <div data-type-tag="dig"> -->
-<!--                                         <a href="#!" class="list-item" title="網路銀行將於110年10月1日起停止支援TLS1.0 及TLS1.1加密通訊協定公告"> -->
-<!--                                             <div class="lCol"><figure class="annTag dig">數位<br>金融</figure></div> -->
-<!--                                             <div class="rCol"><figure class="annInfo"><span class="date">2021/06/12</span>網路銀行將於110年10月1日起停止支援TLS1.0 及TLS1.1加密通訊協定公告</figure></div> -->
-<!--                                         </a> -->
-<!--                                     </div> -->
-<!--                                     <div data-type-tag="bank"> -->
-<!--                                         <a href="#!" class="list-item" title="因應疫情升溫，即日起加強營業場所防疫管理，實施實聯制管控。"> -->
-<!--                                             <div class="lCol"><figure class="annTag bank">銀行<br>資訊</figure></div> -->
-<!--                                             <div class="rCol"><figure class="annInfo"><span class="date">2021/05/24</span>因應疫情升溫，即日起加強營業場所防疫管理，實施實聯制管控。</figure></div> -->
-<!--                                         </a> -->
-<!--                                     </div> -->
-                                </div>
-                                </th:block>
-                                <th:block th:unless="${!detailList.empty}">
-                                            <div>查無訊息</div>
-                                        </th:block>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+	<!--========== Loading =============-->
+	<div class="overlayMask _open">
+		<div class="loader">
+			<!-- 如果要顯示無進度條的豆豆，把這段取消註解 -->
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<!-- 如果要顯示無進度條的豆豆，把這段取消註解 -->
+		</div>
+	</div>
+	<!--========== END Loading =========-->
 
-        <!--========== Footer ==========-->
-        <footer class="footer" include-html="../common/template_footer.html"></footer>
-        <!--========== END Footer ======-->
-    </div>
-    <!-- The Modal -->
-    <div class="modal fade scsbModal" id="myModal">
-        <div class="modal-dialog modal-sm modal-dialog-centered">
-            <div class="modal-content">
-    
-                <!-- Modal Header -->
-                <div class="modal-header border-0 pb-0">
-                    <!-- <h4 class="modal-title">Mobile Phone</h4> -->
-                    <button type="button" class="close" data-dismiss="modal"><img src="images/close.svg" class="img-fluid" alt="關閉視窗"></button>
-                </div>
-    
-                <!-- Modal body -->
-                <div class="modal-body text-center">
-                    <div class="titleBlk_a h6 bold mb-3">掃描QR Code下載</div>
-                    <p><img src="images/u3005.jpg" class="img-fluid" alt="掃描 台灣PAY 示意"></p>
-                </div>
-    
-            </div>
-        </div>
-    </div>
-    <!--========== END Content =========-->
+	<!--========== Content =============-->
+	<div canvas="container">
+		<div class="mainWrap">
+			<div class="container-fluid">
+				<div class="middleWrap fixed-1200">
+					<div class="row">
+						<div class="col-3 leftCol d-none d-lg-block">
+							<!-- 內頁左側選單 -->
+							<div class="leftCol_menu"
+								include-html="common/announcement_left_menu.html"></div>
+						</div>
+						<div class="col-12 col-lg-9 rightCol">
+							<ol class="breadcrumb d-none d-lg-flex" aria-label="麵包屑"
+								data-menu-indexer data-ly-a="A01" data-ly-b="B01"
+								data-ly-c="C01">
+								<li class="accesskey"><a accesskey="C" href="sitemap.jsp"
+									id="accesskey-c" title="中央主內容區塊">:::</a></li>
+								<li class="breadcrumb-item"><a
+									href="https://www.scsb.com.tw/" target="_blank"
+									title="開新視窗-上海商業銀行首頁"><span class="icon-home2"></span></a></li>
+								<li class="breadcrumb-item"><a href="#!" class="disabled">公告/活動/中獎名單</a></li>
+								<li class="breadcrumb-item active">[[${listTitle}]]</li>
+							</ol>
+							<div class="inner-kv">
+								<div class="inner-kv-wrap">
+									<div class="inner-kv-img">
+										<div class="sharebar d-flex justify-content-end">
+											<div class="shareNav d-flex align-items-center">
+												                                                <div class="item">分享：</div>
+												                                                <div class="item"><a href="javascript:void(0);" class="fb" title="Facebook分享" onclick="shareThisPage('fb')"><img src="../images/fb.svg" class="img-fluid" alt="Facebook分享"></a></div>
+												                                                <div class="item"><a href="javascript:void(0);" class="line" title="LINE分享" onclick="shareThisPage('line')"><img src="../images/line.svg" class="img-fluid" alt="Line分享"></a></div>
+												                                                <div class="item d-none d-lg-block"><a href="javascript:void(0);" class="favorite" title="加入收藏"><span>收藏</span></a></div>
+												                                                <div class="item d-none"><a href="javascript:void(0);" class="favorite-mb" title="加入收藏"><span>收藏</span></a></div>
+											</div>
+										</div>
+										<div class="inner-mask announceKv"
+											style="background: url(../images/news_img/inner_kv/banner-note@2x.jpg) no-repeat right center/cover;">
+											<img on-image-load
+												src="../images/share/inner-kv-mask-1024.png"
+												class="img-fluid" alt="*">
+										</div>
+									</div>
+									<div class="inner-kv-slogan d-flex align-items-sm-center">
+										<div class="inner-kv-item">
+											<div class="title h2">[[${listTitle}]]</div>
+											<div class="wording"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mainBox">
+								<div class="category_select">
+									<div class="form_wrap">
+										<div class="form-group form-row align-items-center mb-0">
+											<div class="col-12 col-lg-auto pb-2 pb-lg-0">
+												<span class="labeltitle">請選擇分類</span>
+											</div>
+											<div class="col-12 col-lg-4">
+												<select class="custom-select" id="downloadTypeList"
+													onchange="filterTabBySelector(this)">
+													<option value="" selected="selected">全部</option>
+													<option value="bank">銀行資訊</option>
+													<option value="bus">企業金融</option>
+													<option value="ind">個人金融</option>
+													<option value="dep">台外幣存匯</option>
+													<option value="card">信用卡</option>
+													<option value="fund">財富管理</option>
+													<option value="dig">數位金融</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<th:block th:if="${!detailList.empty}">
+									<div class="list-group downloadLister announceList"
+										id="downloadTypeListTarget" th:each="detail:${detailList}">
+										<div th:switch="${detail.applicantUnit}">
+											<div th:case="'企業金融'" data-type-tag="bank">
+												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
+													<div class="lCol"><figure class="annTag bus">銀行<br>資訊</figure></div>
+													<div class="rCol">
+														<figure class="annInfo">
+															<span class="date"
+																th:text="${#dates.format(detail.createTime, 'YYYY/MM/dd')}">2021/07/07</span>
+															<div
+																th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${detail.id})} + '\''">[[${detail.title}]]</div>
+														</figure>
+													</div>
+												</a>
+											</div>
+											
+											<div th:case="'個人金融'" data-type-tag="ind">
+												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
+													<div class="lCol"><figure class="annTag ind">個人<br>金融</figure></div>
+													<div class="rCol">
+														<figure class="annInfo">
+															<span class="date"
+																th:text="${#dates.format(detail.createTime, 'YYYY/MM/dd')}">2021/07/07</span>
+															<div
+																th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${detail.id})} + '\''">[[${detail.title}]]</div>
+														</figure>
+													</div>
+												</a>
+											</div>
+											
+											<div th:case="'台外幣存匯'" data-type-tag="dep">
+												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
+													<div class="lCol"><figure class="annTag dep">台外幣<br>存匯</figure></div>
+													<div class="rCol">
+														<figure class="annInfo">
+															<span class="date"
+																th:text="${#dates.format(detail.createTime, 'YYYY/MM/dd')}">2021/07/07</span>
+															<div
+																th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${detail.id})} + '\''">[[${detail.title}]]</div>
+														</figure>
+													</div>
+												</a>
+											</div>
+											
+											<div th:case="'信用卡'" data-type-tag="card">
+												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
+													<div class="lCol"><figure class="annTag cdcard">信用卡</figure></div>
+													<div class="rCol">
+														<figure class="annInfo">
+															<span class="date"
+																th:text="${#dates.format(detail.createTime, 'YYYY/MM/dd')}">2021/07/07</span>
+															<div
+																th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${detail.id})} + '\''">[[${detail.title}]]</div>
+														</figure>
+													</div>
+												</a>
+											</div>
+											
+											<div th:case="'財富管理'" data-type-tag="fund">
+												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
+													<div class="lCol"><figure class="annTag fund">財富<br>管理</figure></div>
+													<div class="rCol">
+														<figure class="annInfo">
+															<span class="date"
+																th:text="${#dates.format(detail.createTime, 'YYYY/MM/dd')}">2021/07/07</span>
+															<div
+																th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${detail.id})} + '\''">[[${detail.title}]]</div>
+														</figure>
+													</div>
+												</a>
+											</div>
+											
+											<div th:case="'數位金融'" data-type-tag="dig">
+												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
+													<div class="lCol"><figure class="annTag dig">數位<br>金融</figure></div>
+													<div class="rCol">
+														<figure class="annInfo">
+															<span class="date"
+																th:text="${#dates.format(detail.createTime, 'YYYY/MM/dd')}">2021/07/07</span>
+															<div
+																th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${detail.id})} + '\''">[[${detail.title}]]</div>
+														</figure>
+													</div>
+												</a>
+											</div>
+											
+											
+											<div th:case="*" data-type-tag="bank">
+												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
+												<div class="lCol"><figure class="annTag dig">企業<br>金融</figure></div>
+													<div class="rCol">
+														<figure class="annInfo">
+															<span class="date"
+																th:text="${#dates.format(detail.createTime, 'YYYY/MM/dd')}">2021/07/07</span>
+															<div
+																th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${detail.id})} + '\''">[[${detail.title}]]</div>
+														</figure>
+													</div>
+												</a>
+											</div>
+										</div>
+											
+										</div>
 
-    <!--========== Mobile Menu =========-->
-    <div off-canvas="slidebar-1 left overlay" class="sidemenuWrap" include-html="../common/template_mobile_menu.html"></div>
-    <!--========== END Mobile Menu =====-->
+										<!--                                     
+									</div>
+								</th:block>
+								<th:block th:unless="${!detailList.empty}">
+									<div>查無訊息</div>
+								</th:block>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!--========== Scroll Top ==========-->
-    <div class="js-back-to-top back-to-top" include-html="../common/back-to-top.html"></div>
-    <!--========== END Scroll Top ======-->
+		<!--========== Footer ==========-->
+		<footer class="footer" include-html="../common/template_footer.html"></footer>
+		<!--========== END Footer ======-->
+	</div>
+	<!-- The Modal -->
+	<div class="modal fade scsbModal" id="myModal">
+		<div class="modal-dialog modal-sm modal-dialog-centered">
+			<div class="modal-content">
 
-    <script src="../scripts/jquery.min.js"></script>
-    <script src="../scripts/bootstrap.bundle.min.js"></script>
-    <script src="../scripts/bootstrap-toolkit.min.js"></script>
-    <script src="../scripts/jquery.matchHeight-min.js"></script>
-    <script src="../scripts/animate.js"></script>
-    <script src="../scripts/includeExternalHtml.js"></script>
-    <script src="../scripts/swiper.min.js"></script>
-    <script src="../scripts/slidebars.js"></script>
-    <script src="../scripts/loadingProgress.js"></script>
-    <script src="../scripts/picturefill.min.js"></script>
-    <script src="../scripts/jquery.back-to-top.js"></script>
-    <script src="../scripts/responsive-paginate.js"></script>
-    <script src="../scripts/main.js"></script>
-    
+				<!-- Modal Header -->
+				<div class="modal-header border-0 pb-0">
+					<!-- <h4 class="modal-title">Mobile Phone</h4> -->
+					<button type="button" class="close" data-dismiss="modal">
+						<img src="images/close.svg" class="img-fluid" alt="關閉視窗">
+					</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body text-center">
+					<div class="titleBlk_a h6 bold mb-3">掃描QR Code下載</div>
+					<p>
+						<img src="images/u3005.jpg" class="img-fluid" alt="掃描 台灣PAY 示意">
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--========== END Content =========-->
+
+	<!--========== Mobile Menu =========-->
+	<div off-canvas="slidebar-1 left overlay" class="sidemenuWrap"
+		include-html="../common/template_mobile_menu.html"></div>
+	<!--========== END Mobile Menu =====-->
+
+	<!--========== Scroll Top ==========-->
+	<div class="js-back-to-top back-to-top"
+		include-html="../common/back-to-top.html"></div>
+	<!--========== END Scroll Top ======-->
+
+	<script src="../scripts/jquery.min.js"></script>
+	<script src="../scripts/bootstrap.bundle.min.js"></script>
+	<script src="../scripts/bootstrap-toolkit.min.js"></script>
+	<script src="../scripts/jquery.matchHeight-min.js"></script>
+	<script src="../scripts/animate.js"></script>
+	<script src="../scripts/includeExternalHtml.js"></script>
+	<script src="../scripts/swiper.min.js"></script>
+	<script src="../scripts/slidebars.js"></script>
+	<script src="../scripts/loadingProgress.js"></script>
+	<script src="../scripts/picturefill.min.js"></script>
+	<script src="../scripts/jquery.back-to-top.js"></script>
+	<script src="../scripts/responsive-paginate.js"></script>
+	<script src="../scripts/main.js"></script>
+
 </body>
 
 </html>
