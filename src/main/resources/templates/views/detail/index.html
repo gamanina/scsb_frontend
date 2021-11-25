@@ -78,19 +78,16 @@
 						</div>
 
 						<div class="col-12 col-lg-9 rightCol">
-							<th:block th:if="${!detailList.empty}">
-								<ol class="breadcrumb d-none d-lg-flex" aria-label="麵包屑"
-									data-menu-indexer data-ly-a="A01" data-ly-b="B01"
-									data-ly-c="C01" th:each="detail:${detailList}">
-									<li class="accesskey"><a accesskey="C" href="sitemap.jsp"
-										id="accesskey-c" title="中央主內容區塊">:::</a></li>
-									<li class="breadcrumb-item"><a
-										href="https://www.scsb.com.tw/" target="_blank"
-										title="開新視窗-上海商業銀行首頁"><span class="icon-home2"></span></a></li>
-									
-									<li class="breadcrumb-item active">[[${detail.title}]]</li>
-								</ol>
-							</th:block>
+							<ol class="breadcrumb d-none d-lg-flex" aria-label="麵包屑"
+								data-menu-indexer data-ly-a="A01" data-ly-b="B01" th:data-ly-c="${menuIndex}">
+								<li class="accesskey"><a accesskey="C" href="sitemap.jsp"
+									id="accesskey-c" title="中央主內容區塊">:::</a></li>
+								<li class="breadcrumb-item"><a
+									href="https://www.scsb.com.tw/" target="_blank"
+									title="開新視窗-上海商業銀行首頁"><span class="icon-home2"></span></a></li>
+								
+								<li class="breadcrumb-item active">[[${detail.title}]]</li>
+							</ol>
 							<div class="inner-kv">
 								<div class="inner-kv-wrap">
 									<div class="inner-kv-img">
@@ -121,7 +118,7 @@
 												src="../images/share/inner-kv-mask-1024.png"
 												class="img-fluid" alt="*">
 										</div>
-										<div class="inner-tag" th:each="detail:${detailList}">
+										<div class="inner-tag">
 											<div class="distag bonus">銀行資訊</div>
 											<div class="date" th:text="${#dates.format(detail.offTime, 'YYYY/MM/dd')}+止"></div>
 											
@@ -129,24 +126,19 @@
 									</div>
 									<div class="inner-kv-slogan d-flex align-items-sm-center">
 
-										<th:block th:if="${!detailList.empty}">
-											<div class="inner-kv-item" th:each="detail:${detailList}">
+											<div class="inner-kv-item">
 												<div class="date">110/12/31止</div>
 												<div class="title h2">[[${detail.title}]]</div>
 												<div class="wording"></div>
-										</th:block>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="mainBox">
-							<th:block th:if="${!detailList.empty}">
-								<div th:each="detail:${detailList}">
-									<img th:src="@{${detail.image}}" class="img-fluid">
-									</p>
-									<div>[[${detail.title}]]</div>
+								<div>
+									<img th:src="${detail.image}" class="img-fluid">
+									<div th:utext="${detail.content}"></div>
 								</div>
-							</th:block>
 						</div>
 					</div>
 				</div>

@@ -39,4 +39,10 @@ public class FrontPageController {
 		model.addAttribute("winnerList", winnerList);
 		return "views/FrontPage/index";
 	}
+	
+	@RequestMapping("/")
+	public String root(Model model, HttpServletRequest request) 
+	{
+		return "redirect:FrontPage";
+	}
 }

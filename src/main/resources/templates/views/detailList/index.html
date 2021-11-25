@@ -80,7 +80,7 @@
 						<div class="col-12 col-lg-9 rightCol">
 							<ol class="breadcrumb d-none d-lg-flex" aria-label="麵包屑"
 								data-menu-indexer data-ly-a="A01" data-ly-b="B01"
-								data-ly-c="C01">
+								th:data-ly-c="${menuIndex}">
 								<li class="accesskey"><a accesskey="C" href="sitemap.jsp"
 									id="accesskey-c" title="中央主內容區塊">:::</a></li>
 								<li class="breadcrumb-item"><a
@@ -94,11 +94,11 @@
 									<div class="inner-kv-img">
 										<div class="sharebar d-flex justify-content-end">
 											<div class="shareNav d-flex align-items-center">
-												                                                <div class="item">分享：</div>
-												                                                <div class="item"><a href="javascript:void(0);" class="fb" title="Facebook分享" onclick="shareThisPage('fb')"><img src="../images/fb.svg" class="img-fluid" alt="Facebook分享"></a></div>
-												                                                <div class="item"><a href="javascript:void(0);" class="line" title="LINE分享" onclick="shareThisPage('line')"><img src="../images/line.svg" class="img-fluid" alt="Line分享"></a></div>
-												                                                <div class="item d-none d-lg-block"><a href="javascript:void(0);" class="favorite" title="加入收藏"><span>收藏</span></a></div>
-												                                                <div class="item d-none"><a href="javascript:void(0);" class="favorite-mb" title="加入收藏"><span>收藏</span></a></div>
+                                                <div class="item">分享：</div>
+                                                <div class="item"><a href="javascript:void(0);" class="fb" title="Facebook分享" onclick="shareThisPage('fb')"><img src="../images/fb.svg" class="img-fluid" alt="Facebook分享"></a></div>
+                                                <div class="item"><a href="javascript:void(0);" class="line" title="LINE分享" onclick="shareThisPage('line')"><img src="../images/line.svg" class="img-fluid" alt="Line分享"></a></div>
+                                                <div class="item d-none d-lg-block"><a href="javascript:void(0);" class="favorite" title="加入收藏"><span>收藏</span></a></div>
+                                                <div class="item d-none"><a href="javascript:void(0);" class="favorite-mb" title="加入收藏"><span>收藏</span></a></div>
 											</div>
 										</div>
 										<div class="inner-mask announceKv"
@@ -244,8 +244,6 @@
 										</div>
 											
 										</div>
-
-										<!--                                     
 									</div>
 								</th:block>
 								<th:block th:unless="${!detailList.empty}">
@@ -259,7 +257,7 @@
 		</div>
 
 		<!--========== Footer ==========-->
-		<footer class="footer" include-html="../common/template_footer.html"></footer>
+		<footer class="footer" include-html="/common/template_footer.html"></footer>
 		<!--========== END Footer ======-->
 	</div>
 	<!-- The Modal -->
