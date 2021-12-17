@@ -26,7 +26,7 @@
     <link rel="image_src" href="https://www.scsb.com.tw/newscsbweb/content/images/card_img/share/FB.jpg">
     <link href="favicon.ico" rel="shortcut icon">
 
-    <link rel="stylesheet" href="/styles/all.css">
+    <link rel="stylesheet" href="/scsb_web/styles/all.css">
 
     
 
@@ -38,7 +38,7 @@
     <!--========== HEADER ==============-->
     <header class="header fixed-top">
         <button class="js-toggle-left-slidebar hamburger d-block d-lg-none" type="button"></button>
-        <div class="header-wrap" include-html="/common/template_header.html"></div>
+        <div class="header-wrap" include-html="/scsb_web/common/template_header.html"></div>
     </header>
     <!--========== END Header ==========-->
 
@@ -67,8 +67,8 @@
                         <div class="swiper-slide itemblk">
                             <a href="card02_a.jsp" class="kv-link" title="精采多樣的信用卡">&nbsp;</a>
                             <picture>
-                                <source srcset="/images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
-                                <source srcset="/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+                                <source srcset="/scsb_web/images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+                                <source srcset="/scsb_web/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
                                 <img th:src="@{/images/share/kv-mask-1920.png}" alt="精采多樣的信用卡" class="imgMask"></picture>
                             <div class="kv-img d-block d-lg-none" style="background-image:url(/images/card_img/home/kv-01-768.jpg)" title="Mobile圖片"></div>
                             <div class="kv-img d-none d-md-block" style="background-image:url(/images/card_img/home/kv-01-1920_0.jpg)" title="table、pc圖片"></div>
@@ -78,9 +78,9 @@
 	                    	<div class="swiper-slide itemblk" th:each="banner:${bannerList}">
 	                            <a th:href="@{${banner.imageUrl}}" class="kv-link" th:title="${banner.title}">&nbsp;</a>
 	                            <picture>
-	                                <source srcset="/images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
-	                                <source srcset="/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
-	                                <img src="/images/share/kv-mask-1920.png" alt="精采多樣的信用卡" class="imgMask">
+	                                <source srcset="/scsb_web/images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+	                                <source srcset="/scsb_web/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+	                                <img src="/scsb_web/images/share/kv-mask-1920.png" alt="精采多樣的信用卡" class="imgMask">
 	                            </picture>
 	                            <div class="kv-img d-none d-md-block" th:style="'background-image:url(' + ${banner.image} +')'" title="table、pc圖片"></div>
 								<div class="kv-img d-block d-lg-none" th:style="'background-image:url(' + ${banner.imageMobile} +')'" title="Mobile圖片"></div>
@@ -119,10 +119,10 @@
                     <div class="row hotLister">
                         <div class="col-4 col-lg"><a href="https://apply.scsb.com.tw/card/credit_card/contact" class="hotList-link" target="_blank" title="開新視窗-信用卡線上申請" ><img on-image-load th:src="@{/images/card_img/home/icons-red-card-apply.svg}" class="img-fluid" alt="信用卡線上申請">信用卡線上申請</a></div>
                         <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/share/OnlineCardOpen/begin.do#" class="hotList-link" target="_blank" title="開新視窗-線上開卡" ><img on-image-load th:src="@{/images/card_img/home/icons-red-card-open.svg}" class="img-fluid" alt="線上開卡">線上開卡</a></div>
-                        <div class="col-4 col-lg"><a href="/card/card02_h.html" class="hotList-link" title="額度調升" ><img on-image-load th:src="@{/images/card_img/home/icons-red-card-up.svg}" class="img-fluid" alt="額度調升">額度調升</a></div>
+                        <div class="col-4 col-lg"><a href="/scsb_web/card/card02_h.html" class="hotList-link" title="額度調升" ><img on-image-load th:src="@{/images/card_img/home/icons-red-card-up.svg}" class="img-fluid" alt="額度調升">額度調升</a></div>
                         <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/PROMOTIONS/cardlogin/begin.do" class="hotList-link" target="_blank" title="開新視窗-活動登錄"><img on-image-load th:src="@{/images/card_img/home/icons-red-card-promotion.svg}" class="img-fluid" alt="活動登錄">活動登錄</a></div>
-                        <div class="col-4 col-lg"><a href="/card/card012_Download01.html" class="hotList-link" title="各項申請/表單下載"><img on-image-load th:src="@{/images/card_img/home/icons-red-download.svg}" class="img-fluid" alt="各項申請/表單下載">各項申請/表單下載</a></div>
-                        <div class="col-4 col-lg"><a href="/card/card13_a_01.html" class="hotList-link" title="繳款方式"><img on-image-load th:src="@{/images/card_img/home/icons-red-card-payment.svg}" class="img-fluid" alt="繳款方式">繳款方式</a></div>
+                        <div class="col-4 col-lg"><a href="/scsb_web/card/card012_Download01.html" class="hotList-link" title="各項申請/表單下載"><img on-image-load th:src="@{/images/card_img/home/icons-red-download.svg}" class="img-fluid" alt="各項申請/表單下載">各項申請/表單下載</a></div>
+                        <div class="col-4 col-lg"><a href="/scsb_web/card/card13_a_01.html" class="hotList-link" title="繳款方式"><img on-image-load th:src="@{/images/card_img/home/icons-red-card-payment.svg}" class="img-fluid" alt="繳款方式">繳款方式</a></div>
                     </div>
                     <div class="btnBlkWrap text-center"><a href="card16_b.jsp" title="看更多服務">看更多服務<span class="icon icon-arrow_forward arr"></span></a></div>
                 </div>
@@ -149,68 +149,68 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide cardItem">
                                 <div class="card">
-                                    <div class="card-img"><img on-image-load src="/images/card_img/home/photo-creditcard-1@3x.jpg" class="card-img-top" alt="小小兵信用卡"></div>
+                                    <div class="card-img"><img on-image-load src="/scsb_web/images/card_img/home/photo-creditcard-1@3x.jpg" class="card-img-top" alt="小小兵信用卡"></div>
                                     <div class="card-body">
                                         <h4 class="card-title">小小兵信用卡</h4>
                                         <p class="card-text">超萌卡面超高回饋，療癒你的心</p>
-                                        <a href="/card/card03_i1.html" class="stretched-link" title="小小兵信用卡" onclick="window.location.href = this.href">&nbsp;</a>
+                                        <a href="/scsb_web/card/card03_i1.html" class="stretched-link" title="小小兵信用卡" onclick="window.location.href = this.href">&nbsp;</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide cardItem">
                                 <div class="card">
-                                    <div class="card-img"><img on-image-load src="/images/card_img/home/photo-creditcard-2@3x.jpg" class="card-img-top" alt="簡單卡"></div>
+                                    <div class="card-img"><img on-image-load src="/scsb_web/images/card_img/home/photo-creditcard-2@3x.jpg" class="card-img-top" alt="簡單卡"></div>
                                     <div class="card-body">
                                         <h4 class="card-title">簡單卡</h4>
                                         <p class="card-text">回饋最無腦，次期回饋無上限也無下限</p>
-                                        <a href="/card/card03_h1.html" class="stretched-link" title="簡單卡" onclick="window.location.href = this.href">&nbsp;</a>
+                                        <a href="/scsb_web/card/card03_h1.html" class="stretched-link" title="簡單卡" onclick="window.location.href = this.href">&nbsp;</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide cardItem">
                                 <div class="card">
-                                    <div class="card-img"><img on-image-load src="/images/card_img/home/photo-creditcard-3@3x.jpg" class="card-img-top" alt="牙醫師卡"></div>
+                                    <div class="card-img"><img on-image-load src="/scsb_web/images/card_img/home/photo-creditcard-3@3x.jpg" class="card-img-top" alt="牙醫師卡"></div>
                                     <div class="card-body">
                                         <h4 class="card-title">牙醫師卡</h4>
                                         <p class="card-text">專屬醫療責任險，給您更多保障</p>
-                                        <a href="/card/card03_c4.html" class="stretched-link" title="牙醫師卡" onclick="window.location.href = this.href">&nbsp;</a>
+                                        <a href="/scsb_web/card/card03_c4.html" class="stretched-link" title="牙醫師卡" onclick="window.location.href = this.href">&nbsp;</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide cardItem">
                                 <div class="card">
-                                    <div class="card-img"><img on-image-load src="/images/card_img/home/photo-creditcard-4@3x.jpg" class="card-img-top" alt="Teresa Card"></div>
+                                    <div class="card-img"><img on-image-load src="/scsb_web/images/card_img/home/photo-creditcard-4@3x.jpg" class="card-img-top" alt="Teresa Card"></div>
                                     <div class="card-body">
                                         <h4 class="card-title">Teresa Card</h4>
                                         <p class="card-text">讓生活更優雅‧Smart‧健康</p>
-                                        <a href="/card/card03_g1.html" class="stretched-link" title="Teresa Card" onclick="window.location.href = this.href">&nbsp;</a>
+                                        <a href="/scsb_web/card/card03_g1.html" class="stretched-link" title="Teresa Card" onclick="window.location.href = this.href">&nbsp;</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide cardItem">
                                 <div class="card">
-                                    <div class="card-img"><img on-image-load src="/images/card_img/home/photo-creditcard-5.png" class="card-img-top" alt="世界卡"></div>
+                                    <div class="card-img"><img on-image-load src="/scsb_web/images/card_img/home/photo-creditcard-5.png" class="card-img-top" alt="世界卡"></div>
                                     <div class="card-body">
                                         <h4 class="card-title">世界卡</h4>
                                         <p class="card-text">點綴您的精采生活，盡享無上尊榮禮遇</p>
-                                        <a href="/card/card03_e.html" class="stretched-link" title="Teresa Card" onclick="window.location.href = this.href">&nbsp;</a>
+                                        <a href="/scsb_web/card/card03_e.html" class="stretched-link" title="Teresa Card" onclick="window.location.href = this.href">&nbsp;</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide cardItem">
                                 <div class="card">
-                                    <div class="card-img"><img on-image-load src="/images/card_img/home/photo-creditcard-6.png" class="card-img-top" alt="DebitCard"></div>
+                                    <div class="card-img"><img on-image-load src="/scsb_web/images/card_img/home/photo-creditcard-6.png" class="card-img-top" alt="DebitCard"></div>
                                     <div class="card-body">
                                         <h4 class="card-title">DebitCard</h4>
                                         <p class="card-text">讓您轉帳‧消費，一卡樂悠遊</p>
-                                        <a href="/card/card03_f1.html" class="stretched-link" title="Teresa Card" onclick="window.location.href = this.href">&nbsp;</a>
+                                        <a href="/scsb_web/card/card03_f1.html" class="stretched-link" title="Teresa Card" onclick="window.location.href = this.href">&nbsp;</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="btnBlkWrap text-center"><a href="/card/card03_i1.html" title="看更多卡片">看更多卡片<span class="icon icon-arrow_forward arr"></span></a></div>
+                <div class="btnBlkWrap text-center"><a href="/scsb_web/card/card03_i1.html" title="看更多卡片">看更多卡片<span class="icon icon-arrow_forward arr"></span></a></div>
             </div>
 
             <div class="container-fluid serviceWrap">
@@ -235,7 +235,7 @@
 <!--                             <div class="swiper-slide cardItem"> -->
 <!--                                 <div class="card"> -->
 <!--                                     <div class="distag bonus">紅利點數</div> -->
-<!--                                     <img on-image-load }" alt="/images/card_img/home/16-9@3x.jpg" class="card-img-top" alt="安心看電影，刷上海銀行卡線上訂票即享免排隊先選位"> -->
+<!--                                     <img on-image-load }" alt="/scsb_web/images/card_img/home/16-9@3x.jpg" class="card-img-top" alt="安心看電影，刷上海銀行卡線上訂票即享免排隊先選位"> -->
 <!--                                     <div class="card-body"> -->
 <!--                                         <div class="date">2021/01/01~2021/12/31</div> -->
 <!--                                         <h4 class="card-title">安心看電影，刷上海銀行卡線上訂票即享免排隊先選位</h4> -->
@@ -248,7 +248,7 @@
 <!--                             <div class="swiper-slide cardItem"> -->
 <!--                                 <div class="card"> -->
 <!--                                     <div class="distag travel">旅遊活動</div> -->
-<!--                                     <img on-image-load src="../images/card_img/home/16-10@3x.jpg" class="card-img-top" alt="搭高鐵升等商務車廂"> -->
+<!--                                     <img on-image-load src="/scsb_web/images/card_img/home/16-10@3x.jpg" class="card-img-top" alt="搭高鐵升等商務車廂"> -->
 <!--                                     <div class="card-body"> -->
 <!--                                         <div class="date">2021/01/01~2021/12/31</div> -->
 <!--                                         <h4 class="card-title">搭高鐵升等商務車廂</h4> -->
@@ -261,7 +261,7 @@
 <!--                             <div class="swiper-slide cardItem"> -->
 <!--                                 <div class="card"> -->
 <!--                                     <div class="distag bonus">紅利點數</div> -->
-<!--                                     <img on-image-load src="../images/card_img/home/16-11@3x.jpg" class="card-img-top" alt="東森購物就刷上海銀行信用卡"> -->
+<!--                                     <img on-image-load src="/scsb_web/images/card_img/home/16-11@3x.jpg" class="card-img-top" alt="東森購物就刷上海銀行信用卡"> -->
 <!--                                     <div class="card-body"> -->
 <!--                                         <div class="date">2021/01/01~2021/01/31</div> -->
 <!--                                         <h4 class="card-title">東森購物就刷上海銀行信用卡</h4> -->
@@ -274,7 +274,7 @@
 <!--                             <div class="swiper-slide cardItem"> -->
 <!--                                 <div class="card"> -->
 <!--                                     <div class="distag travel">旅遊活動</div> -->
-<!--                                     <img on-image-load src="../images/card_img/home/16-11@3x.jpg" class="card-img-top" alt="東森購物就刷上海銀行信用卡"> -->
+<!--                                     <img on-image-load src="/scsb_web/images/card_img/home/16-11@3x.jpg" class="card-img-top" alt="東森購物就刷上海銀行信用卡"> -->
 <!--                                     <div class="card-body"> -->
 <!--                                         <div class="date">2021/01/01~2021/01/31</div> -->
 <!--                                         <h4 class="card-title">東森購物就刷上海銀行信用卡</h4> -->
@@ -329,7 +329,7 @@
                                 	<th:block th:if="${adList.empty}">
                                     <div class="swiper-slide eventItem">
                                         <div class="card">
-                                            <img on-image-load src="/images/card_img/news/news_01.jpg" alt="刷上海銀行Visa卡，享漢堡王指定套餐65折優惠" class="img-fluid w-100">
+                                            <img on-image-load src="/scsb_web/images/card_img/news/news_01.jpg" alt="刷上海銀行Visa卡，享漢堡王指定套餐65折優惠" class="img-fluid w-100">
                                             <a href="https://www.scsb.com.tw/" class="stretched-link" title="刷上海銀行Visa卡，享漢堡王指定套餐65折優惠"></a>
                                             <div class="card-overlay">
                                                 <div class="date">2021/01/07</div>
@@ -339,7 +339,7 @@
                                     </div>
                                     <div class="swiper-slide eventItem">
                                         <div class="card">
-                                            <img on-image-load src="/images/card_img/news/news_01.jpg" alt="刷上海銀行Visa卡，享漢堡王指定套餐65折優惠" class="img-fluid w-100">
+                                            <img on-image-load src="/scsb_web/images/card_img/news/news_01.jpg" alt="刷上海銀行Visa卡，享漢堡王指定套餐65折優惠" class="img-fluid w-100">
                                             <a href="https://www.scsb.com.tw/" class="stretched-link" title="刷上海銀行Visa卡，享漢堡王指定套餐65折優惠"></a>
                                             <div class="card-overlay">
                                                 <div class="date">2021/01/07</div>
@@ -385,35 +385,35 @@
             <!-- End Event -->
         </div>
         <!--========== 信用卡分期注意事項 ==========-->
-        <div class="loanNotice" include-html="/common/template_creditcard.html"></div>
+        <div class="loanNotice" include-html="/scsb_web/common/template_creditcard.html"></div>
         <!--========== Footer ==========-->
-        <footer class="footer" include-html="/common/template_footer.html"></footer>
+        <footer class="footer" include-html="/scsb_web/common/template_footer.html"></footer>
         <!--========== END Footer ======-->
     </div>
     <!--========== END Content =========-->
 
     <!--========== Mobile Menu =========-->
 <!--     <div off-canvas="slidebar-1 left overlay" class="sidemenuWrap" th:replace="fragments/template_mobile_menu.html :: sidebar"></div> -->
-	<div off-canvas="slidebar-1 left overlay" class="sidemenuWrap" include-html="/common/template_mobile_menu.html"></div>
+	<div off-canvas="slidebar-1 left overlay" class="sidemenuWrap" include-html="/scsb_web/common/template_mobile_menu.html"></div>
     <!--========== END Mobile Menu =====-->
 
     <!--========== Scroll Top ==========-->
-    <div class="js-back-to-top back-to-top" include-html="/common/back-to-top.html"></div>
+    <div class="js-back-to-top back-to-top" include-html="/scsb_web/common/back-to-top.html"></div>
     <!--========== END Scroll Top ======-->
 
-    <script src="/scripts/jquery.min.js"></script>
-    <script src="/scripts/bootstrap.bundle.min.js"></script>
-    <script src="/scripts/bootstrap-toolkit.min.js"></script>
-    <script src="/scripts/jquery.matchHeight-min.js"></script>
-    <script src="/scripts/animate.js"></script>
-    <script src="/scripts/includeExternalHtml.js"></script>
-    <script src="/scripts/swiper.min.js"></script>
-    <script src="/scripts/slidebars.js"></script>
-    <script src="/scripts/loadingProgress.js"></script>
-    <script src="/scripts/picturefill.min.js"></script>
-    <script src="/scripts/jquery.back-to-top.js"></script>
-    <script src="/scripts/responsive-paginate.js"></script>
-    <script src="/scripts/main.js"></script>
+    <script src="/scsb_web/scripts/jquery.min.js"></script>
+    <script src="/scsb_web/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/scsb_web/scripts/bootstrap-toolkit.min.js"></script>
+    <script src="/scsb_web/scripts/jquery.matchHeight-min.js"></script>
+    <script src="/scsb_web/scripts/animate.js"></script>
+    <script src="/scsb_web/scripts/includeExternalHtml.js"></script>
+    <script src="/scsb_web/scripts/swiper.min.js"></script>
+    <script src="/scsb_web/scripts/slidebars.js"></script>
+    <script src="/scsb_web/scripts/loadingProgress.js"></script>
+    <script src="/scsb_web/scripts/picturefill.min.js"></script>
+    <script src="/scsb_web/scripts/jquery.back-to-top.js"></script>
+    <script src="/scsb_web/scripts/responsive-paginate.js"></script>
+    <script src="/scsb_web/scripts/main.js"></script>
     
 </body>
 

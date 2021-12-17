@@ -26,7 +26,7 @@
     <link rel="image_src" href="https://www.scsb.com.tw/newscsbweb/content/images/dep_img/share/FB.jpg">
     <link href="favicon.ico" rel="shortcut icon">
 
-    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="/scsb_web/styles/all.css">
 
     
 
@@ -38,7 +38,7 @@
     <!--========== HEADER ==============-->
     <header class="header fixed-top">
         <button class="js-toggle-left-slidebar hamburger d-block d-lg-none" type="button"></button>
-        <div class="header-wrap" include-html="../common/template_header.html"></div>
+        <div class="header-wrap" include-html="/scsb_web/common/template_header.html"></div>
     </header>
     <!--========== END Header ==========-->
 
@@ -67,9 +67,9 @@
 	                        <div class="swiper-slide itemblk" th:each="banner:${bannerList}">
 	                            <a th:href="@{${banner.imageUrl}}" class="kv-link" title="開新視窗-嶄新的數位金融">&nbsp;</a>
 	                            <picture>
-	                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
-	                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
-	                                <img src="../images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask">
+	                                <source srcset="/scsb_web/images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+	                                <source srcset="/scsb_web/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+	                                <img src="/scsb_web/images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask">
 	                            </picture>
 	                            <div class="kv-img d-none d-md-block" th:style="'background-image:url(' + @{${banner.image}} +')'" title="table、pc圖片"></div>
 								<div class="kv-img d-block d-lg-none" th:style="'background-image:url(' + @{${banner.imageMobile}} +')'" title="Mobile圖片"></div>
@@ -79,9 +79,9 @@
                         	<div class="swiper-slide itemblk">
 	                            <a href="dep08.html" class="kv-link" title="嶄新的數位金融">&nbsp;</a>
 	                            <picture>
-	                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
-	                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
-	                                <img src="../images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask">
+	                                <source srcset="/scsb_web/images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+	                                <source srcset="/scsb_web/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+	                                <img src="/scsb_web/images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask">
 	                            </picture>                         </picture>
 	                            <div class="kv-img d-block d-lg-none" style="background-image:url(../images/dep_img/home/kv-01-768.jpg)" title="Mobile圖片"></div>
 	                            <div class="kv-img d-none d-md-block" style="background-image:url(../images/dep_img/home/kv-01-1920_0.jpg)" title="table、pc圖片"></div>
@@ -90,9 +90,9 @@
 <!--                         <div class="swiper-slide itemblk"> -->
 <!--                             <a href="dep08.jsp" class="kv-link" title="嶄新的數位金融">&nbsp;</a> -->
 <!--                             <picture> -->
-<!--                                 <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)"> -->
-<!--                                 <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)"> -->
-<!--                                 <img src="../images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask"> -->
+<!--                                 <source srcset="/scsb_web/images/share/kv-mask-1024.png" media="(max-width: 767.9px)"> -->
+<!--                                 <source srcset="/scsb_web/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)"> -->
+<!--                                 <img src="/scsb_web/images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask"> -->
 <!--                             </picture>                         </picture> -->
 <!--                             <div class="kv-img d-block d-lg-none" style="background-image:url(../images/dep_img/home/kv-01-768.jpg)" title="Mobile圖片"></div> -->
 <!--                             <div class="kv-img d-none d-md-block" style="background-image:url(../images/dep_img/home/kv-01-1920_0.jpg)" title="table、pc圖片"></div> -->
@@ -100,9 +100,9 @@
                         <!-- <div class="swiper-slide itemblk">
                             <a href="https://www.scsb.com.tw/content/cloudbank/index.html" class="kv-link" target="_blank" title="開新視窗-Cloud Bank by SCSB">&nbsp;</a>
                             <picture>
-                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
-                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
-                                <img src="../images/share/kv-mask-1920.png" alt="Cloud Bank by SCSB" class="imgMask">
+                                <source srcset="/scsb_web/images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+                                <source srcset="/scsb_web/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+                                <img src="/scsb_web/images/share/kv-mask-1920.png" alt="Cloud Bank by SCSB" class="imgMask">
                             </picture>
                             <div class="kv-img d-block d-lg-none" style="background-image:url(../images/main_kv/kv-04-768.jpg)" title="Mobile圖片"></div>
                             <div class="kv-img d-none d-md-block" style="background-image:url(../images/main_kv/kv-04-1920_0.jpg)" title="table、pc圖片"></div>
@@ -110,9 +110,9 @@
                         <div class="swiper-slide itemblk">
                             <a href="https://www.scsb.com.tw/content/news/news_081218.jsp" class="kv-link" target="_blank" title="開新視窗-上海商銀ATM外幣提款享">&nbsp;</a>
                             <picture>
-                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
-                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
-                                <img src="../images/share/kv-mask-1920.png" alt="上海商銀ATM外幣提款享" class="imgMask">
+                                <source srcset="/scsb_web/images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+                                <source srcset="/scsb_web/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+                                <img src="/scsb_web/images/share/kv-mask-1920.png" alt="上海商銀ATM外幣提款享" class="imgMask">
                             </picture>
                             <div class="kv-img d-block d-lg-none" style="background-image:url(../images/main_kv/kv-02-768.jpg)" title="Mobile圖片"></div>
                             <div class="kv-img d-none d-md-block" style="background-image:url(../images/main_kv/kv-02-1920_0.jpg)" title="table、pc圖片"></div>
@@ -120,9 +120,9 @@
                         <div class="swiper-slide itemblk">
                             <a href="https://www.scsb.com.tw/content/news/news_061102.jsp" class="kv-link" target="_blank" title="開新視窗-全球一路通">&nbsp;</a>
                             <picture>
-                                <source srcset="../images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
-                                <source srcset="../images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
-                                <img src="../images/share/kv-mask-1920.png" alt="全球一路通" class="imgMask">
+                                <source srcset="/scsb_web/images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
+                                <source srcset="/scsb_web/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
+                                <img src="/scsb_web/images/share/kv-mask-1920.png" alt="全球一路通" class="imgMask">
                             </picture>
                             <div class="kv-img d-block d-lg-none" style="background-image:url(../images/main_kv/kv-03-768.jpg)" title="Mobile圖片"></div>
                             <div class="kv-img d-none d-md-block" style="background-image:url(../images/main_kv/kv-03-1920_0.jpg)" title="table、pc圖片"></div>
@@ -157,11 +157,11 @@
                 <div class="middleWrap fixed-1200">
                     <div class="heading h3">大家都在用</div>
                     <div class="row hotLister">
-                        <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/share/PayrollAccount/begin.do" class="hotList-link" target="_blank"title="開新視窗-預約開戶" ><img on-image-load src="../images/dep_img/home/book-account.svg" class="img-fluid" alt="預約開戶">預約開戶</a></div>
-                        <div class="col-4 col-lg"><a href="https://mservice.scsb.com.tw/PukiiTwProcess/index.jsp" class="hotList-link" target="_blank"title="開新視窗-新台幣預處理服務"><img on-image-load src="../images/dep_img/home/ntd-service.svg" class="img-fluid" alt="新台幣預處理服務">新台幣預處理服務</a></div>
-                        <div class="col-4 col-lg"><a href="https://mservice.scsb.com.tw/PukiiForeignExchange/RemittanceBooking/index.jsp" class="hotList-link" target="_blank" title="開新視窗-預約外幣匯款"><img on-image-load src="../images/dep_img/home/foreign-currency-remittance.svg" class="img-fluid" alt="預約外幣匯款">預約外幣匯款</a></div>
-                        <div class="col-4 col-lg"><a href="dep06.jsp" class="hotList-link" title="開新視窗-下載專區"><img on-image-load src="../images/dep_img/home/download.svg" class="img-fluid" alt="下載專區">下載專區</a></div>
-                        <div class="col-4 col-lg"><a href="dep10.jsp" class="hotList-link" title="開新視窗-利率查詢"><img on-image-load src="../images/dep_img/home/interest-rate.svg" class="img-fluid" alt="開新視窗-利率查詢">利率查詢</a></div>
+                        <div class="col-4 col-lg"><a href="https://ibank.scsb.com.tw/share/PayrollAccount/begin.do" class="hotList-link" target="_blank"title="開新視窗-預約開戶" ><img on-image-load src="/scsb_web/images/dep_img/home/book-account.svg" class="img-fluid" alt="預約開戶">預約開戶</a></div>
+                        <div class="col-4 col-lg"><a href="https://mservice.scsb.com.tw/PukiiTwProcess/index.jsp" class="hotList-link" target="_blank"title="開新視窗-新台幣預處理服務"><img on-image-load src="/scsb_web/images/dep_img/home/ntd-service.svg" class="img-fluid" alt="新台幣預處理服務">新台幣預處理服務</a></div>
+                        <div class="col-4 col-lg"><a href="https://mservice.scsb.com.tw/PukiiForeignExchange/RemittanceBooking/index.jsp" class="hotList-link" target="_blank" title="開新視窗-預約外幣匯款"><img on-image-load src="/scsb_web/images/dep_img/home/foreign-currency-remittance.svg" class="img-fluid" alt="預約外幣匯款">預約外幣匯款</a></div>
+                        <div class="col-4 col-lg"><a href="dep06.jsp" class="hotList-link" title="開新視窗-下載專區"><img on-image-load src="/scsb_web/images/dep_img/home/download.svg" class="img-fluid" alt="下載專區">下載專區</a></div>
+                        <div class="col-4 col-lg"><a href="dep10.jsp" class="hotList-link" title="開新視窗-利率查詢"><img on-image-load src="/scsb_web/images/dep_img/home/interest-rate.svg" class="img-fluid" alt="開新視窗-利率查詢">利率查詢</a></div>
                     </div>
                     <div class="btnBlkWrap text-center"><a href="dep08.jsp" title="看更多服務">看更多服務<span class="icon icon-arrow_forward arr"></span></a></div>
                 </div>
@@ -188,7 +188,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide cardItem">
                                 <div class="card">
-                                    <img on-image-load src="../images/dep_img/home/16-9@3x.jpg" class="card-img-top" alt="新台幣存款">
+                                    <img on-image-load src="/scsb_web/images/dep_img/home/16-9@3x.jpg" class="card-img-top" alt="新台幣存款">
                                     <div class="card-body">
                                         <h4 class="card-title">新台幣存款</h4>
                                         <p class="card-text">新台幣活期存款</p>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="swiper-slide cardItem">
                                 <div class="card">
-                                    <img on-image-load src="../images/dep_img/home/16-10@3x.jpg" class="card-img-top" alt="外幣存款">
+                                    <img on-image-load src="/scsb_web/images/dep_img/home/16-10@3x.jpg" class="card-img-top" alt="外幣存款">
                                     <div class="card-body">
                                         <h4 class="card-title">外幣存款</h4>
                                         <p class="card-text">外幣活期存款</p>
@@ -206,7 +206,7 @@
                             </div>
                             <div class="swiper-slide cardItem">
                                 <div class="card">
-                                    <img on-image-load src="../images/dep_img/home/16-11@3x.jpg" class="card-img-top" alt="匯兌業務">
+                                    <img on-image-load src="/scsb_web/images/dep_img/home/16-11@3x.jpg" class="card-img-top" alt="匯兌業務">
                                     <div class="card-body">
                                         <h4 class="card-title">匯兌業務</h4>
                                         <p class="card-text">國內匯款</p>
@@ -215,7 +215,7 @@
                             </div>
                             <div class="swiper-slide cardItem">
                                 <div class="card">
-                                    <img on-image-load src="../images/dep_img/home/16-12@3x.jpg" class="card-img-top" alt="台外幣優惠存款專案">
+                                    <img on-image-load src="/scsb_web/images/dep_img/home/16-12@3x.jpg" class="card-img-top" alt="台外幣優惠存款專案">
                                     <div class="card-body">
                                         <h4 class="card-title">台外幣優惠存款</h4>
                                         <p class="card-text">台外幣優惠活動</p>
@@ -263,8 +263,8 @@
                                     <th:block th:unless="${!adList.empty}">
                                     	<div class="swiper-slide eventItem">
 	                                        <div class="card">
-	                                            <img on-image-load src="../images/dep_img/news/news_01.jpg" alt="美元優利定存利率最高1.38%，額度有限，辦理趁現在！" class="img-fluid w-100">
-	                                            <a href="../../../content/news/news_090629.jsp" class="stretched-link" title="美元優利定存利率最高1.38%，額度有限，辦理趁現在！"></a>
+	                                            <img on-image-load src="/scsb_web/images/dep_img/news/news_01.jpg" alt="美元優利定存利率最高1.38%，額度有限，辦理趁現在！" class="img-fluid w-100">
+	                                            <a href="/scsb_web/../../content/news/news_090629.jsp" class="stretched-link" title="美元優利定存利率最高1.38%，額度有限，辦理趁現在！"></a>
 	                                            <div class="card-overlay">
 	                                                <div class="date">2020/06/29</div>
 	                                                <div class="card-text bold">美元優利定存利率最高1.38%，額度有限，辦理趁現在！</div>
@@ -274,8 +274,8 @@
                                     </th:block>
 <!--                                     <div class="swiper-slide eventItem"> -->
 <!--                                         <div class="card"> -->
-<!--                                             <img on-image-load src="../images/dep_img/news/news_01.jpg" alt="美元優利定存利率最高1.38%，額度有限，辦理趁現在！" class="img-fluid w-100"> -->
-<!--                                             <a href="../../../content/news/news_090629.jsp" class="stretched-link" title="美元優利定存利率最高1.38%，額度有限，辦理趁現在！"></a> -->
+<!--                                             <img on-image-load src="/scsb_web/images/dep_img/news/news_01.jpg" alt="美元優利定存利率最高1.38%，額度有限，辦理趁現在！" class="img-fluid w-100"> -->
+<!--                                             <a href="/scsb_web/../../content/news/news_090629.jsp" class="stretched-link" title="美元優利定存利率最高1.38%，額度有限，辦理趁現在！"></a> -->
 <!--                                             <div class="card-overlay"> -->
 <!--                                                 <div class="date">2020/06/29</div> -->
 <!--                                                 <div class="card-text bold">美元優利定存利率最高1.38%，額度有限，辦理趁現在！</div> -->
@@ -284,8 +284,8 @@
 <!--                                     </div> -->
 <!--                                     <div class="swiper-slide eventItem"> -->
 <!--                                         <div class="card"> -->
-<!--                                             <img on-image-load src="../images/dep_img/news/news_02.jpg" alt="人民幣優利定存專案" class="img-fluid w-100"> -->
-<!--                                             <a href="../../../content/news/news_090629-1.jsp" class="stretched-link" title="人民幣優利定存專案"></a> -->
+<!--                                             <img on-image-load src="/scsb_web/images/dep_img/news/news_02.jpg" alt="人民幣優利定存專案" class="img-fluid w-100"> -->
+<!--                                             <a href="/scsb_web/../../content/news/news_090629-1.jsp" class="stretched-link" title="人民幣優利定存專案"></a> -->
 <!--                                             <div class="card-overlay"> -->
 <!--                                                 <div class="date">2020/06/29</div> -->
 <!--                                                 <div class="card-text bold">機智的利率生活，人民幣優利定存利率最高2.28%~</div> -->
@@ -294,8 +294,8 @@
 <!--                                     </div> -->
 <!--                                     <div class="swiper-slide eventItem"> -->
 <!--                                         <div class="card"> -->
-<!--                                             <img on-image-load src="../images/dep_img/news/news_03.jpg" alt="港幣優利定存專案" class="img-fluid w-100"> -->
-<!--                                             <a href="../../../content/news/news_090629-2.jsp" class="stretched-link" title="港幣優利定存專案"></a> -->
+<!--                                             <img on-image-load src="/scsb_web/images/dep_img/news/news_03.jpg" alt="港幣優利定存專案" class="img-fluid w-100"> -->
+<!--                                             <a href="/scsb_web/../../content/news/news_090629-2.jsp" class="stretched-link" title="港幣優利定存專案"></a> -->
 <!--                                             <div class="card-overlay"> -->
 <!--                                                 <div class="date">2020/06/29</div> -->
 <!--                                                 <div class="card-text bold">機智的利率生活，港幣優利定存利率最高2.08%~</div> -->
@@ -304,7 +304,7 @@
 <!--                                     </div> -->
                                     <!-- <div class="swiper-slide eventItem">
                                         <div class="card">
-                                            <img on-image-load src="../images/dep_img/news/news_02.jpg" alt="上海商銀幸福貸回家，超低利率1.58%起" class="img-fluid w-100">
+                                            <img on-image-load src="/scsb_web/images/dep_img/news/news_02.jpg" alt="上海商銀幸福貸回家，超低利率1.58%起" class="img-fluid w-100">
                                             <a href="https://www.scsb.com.tw/content/scsb_happiness_production/index.html" class="stretched-link" target="_blank" title="上海商銀幸福貸回家，超低利率1.58%起"></a>
                                             <div class="card-overlay">
                                                 <div class="date">2020/05/04</div>
@@ -318,14 +318,14 @@
                         <div class="col-12 col-lg-6 col-xl-7 px-0 px-xl-3">
                             <div class="event-lister">
                             	<th:block th:if="${!newsList.empty}">
-	                                <a th:each="news:${newsList}" href="../../../content/news/news_090630.html" class="item-link">
+	                                <a th:each="news:${newsList}" href="/scsb_web/../../content/news/news_090630.html" class="item-link">
 	                                	<span class="date" th:text="${#dates.format(news.createTime, 'YYYY/MM/dd')}">2020/06/30</span>[[${news.title}]]
 	                                </a>
                                 </th:block>
                                 <th:block th:unless="${!newsList.empty}">
-                                	<a href="../../../content/news/news_090629.jsp" class="item-link"><span class="date">2020/07/01</span>美元優利定存利率最高1.38%，額度有限，辦理趁現在！</a> 
-                                	<a href="../../../content/news/news_090629-1.jsp" class="item-link"><span class="date">2020/07/01</span>機智的利率生活，人民幣優利定存利率最高2.28%~</a>       
-                                	<a href="../dig/dig27_a.jsp" class="item-link"><span class="date">2020/03/01</span>Cloud Bank 數位存款帳戶，提供您「手續費優惠」、「悠遊卡自動加值回饋」與「台幣活存利率」三大優惠，立馬體驗去！</a>                            
+                                	<a href="/scsb_web/../../content/news/news_090629.jsp" class="item-link"><span class="date">2020/07/01</span>美元優利定存利率最高1.38%，額度有限，辦理趁現在！</a> 
+                                	<a href="/scsb_web/../../content/news/news_090629-1.jsp" class="item-link"><span class="date">2020/07/01</span>機智的利率生活，人民幣優利定存利率最高2.28%~</a>       
+                                	<a href="/scsb_web/dig/dig27_a.jsp" class="item-link"><span class="date">2020/03/01</span>Cloud Bank 數位存款帳戶，提供您「手續費優惠」、「悠遊卡自動加值回饋」與「台幣活存利率」三大優惠，立馬體驗去！</a>                            
                                 </th:block>
                             </div>
                         </div>
@@ -336,31 +336,31 @@
             <!-- End Event -->
         </div>
         <!--========== Footer ==========-->
-        <footer class="footer" include-html="../common/template_footer.html"></footer>
+        <footer class="footer" include-html="/scsb_web/common/template_footer.html"></footer>
         <!--========== END Footer ======-->
     </div>
     <!--========== END Content =========-->
 
     <!--========== Mobile Menu =========-->
-    <div off-canvas="slidebar-1 left overlay" class="sidemenuWrap" include-html="../common/template_mobile_menu.html"></div>
+    <div off-canvas="slidebar-1 left overlay" class="sidemenuWrap" include-html="/scsb_web/common/template_mobile_menu.html"></div>
     <!--========== END Mobile Menu =====-->
 
     <!--========== Scroll Top ==========-->
-    <div class="js-back-to-top back-to-top" include-html="../common/back-to-top.html"></div>
+    <div class="js-back-to-top back-to-top" include-html="/scsb_web/common/back-to-top.html"></div>
     <!--========== END Scroll Top ======-->
 
-    <script src="../scripts/jquery.min.js"></script>
-    <script src="../scripts/bootstrap.bundle.min.js"></script>
-    <script src="../scripts/bootstrap-toolkit.min.js"></script>
-    <script src="../scripts/jquery.matchHeight-min.js"></script>
-    <script src="../scripts/animate.js"></script>
-    <script src="../scripts/includeExternalHtml.js"></script>
-    <script src="../scripts/swiper.min.js"></script>
-    <script src="../scripts/slidebars.js"></script>
-    <script src="../scripts/loadingProgress.js"></script>
-    <script src="../scripts/picturefill.min.js"></script>
-    <script src="../scripts/jquery.back-to-top.js"></script>
-    <script src="../scripts/main.js"></script>
+    <script src="/scsb_web/scripts/jquery.min.js"></script>
+    <script src="/scsb_web/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/scsb_web/scripts/bootstrap-toolkit.min.js"></script>
+    <script src="/scsb_web/scripts/jquery.matchHeight-min.js"></script>
+    <script src="/scsb_web/scripts/animate.js"></script>
+    <script src="/scsb_web/scripts/includeExternalHtml.js"></script>
+    <script src="/scsb_web/scripts/swiper.min.js"></script>
+    <script src="/scsb_web/scripts/slidebars.js"></script>
+    <script src="/scsb_web/scripts/loadingProgress.js"></script>
+    <script src="/scsb_web/scripts/picturefill.min.js"></script>
+    <script src="/scsb_web/scripts/jquery.back-to-top.js"></script>
+    <script src="/scsb_web/scripts/main.js"></script>
     
 </body>
 
