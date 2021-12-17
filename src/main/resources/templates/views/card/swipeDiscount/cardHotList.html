@@ -251,7 +251,7 @@
     					}
         				$.ajax({
         					timeout: 3000,// 送出請求3秒後沒收到回應拋錯誤訊息
-        					url: '/card/hotList/' + $('#downloadTypeList').val() + '?page=' + page,
+        					url: $('#downloadTypeList').val() + '?page=' + page,
         					type: 'GET',
         					success: function (result) {
         						// 將後端渲染後的頁面取回替代目前的event-all區塊
