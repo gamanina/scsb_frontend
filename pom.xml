@@ -92,7 +92,7 @@
 
 	<build>
 		<!-- 設定war檔名稱 -->
-		<finalName>${project.name}</finalName>
+		<finalName>newscsbweb</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
