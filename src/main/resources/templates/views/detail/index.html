@@ -40,7 +40,7 @@
 
 
 </head>
-<body id="activeCont" data-nav-active-04>
+<body id="activeCont">
 
 
 	<!--========== HEADER ==============-->
@@ -136,7 +136,9 @@
 						</div>
 						<div class="mainBox">
 								<div>
-									<img th:src="${detail.image}" class="img-fluid">
+									<th:block th:if="${detail.image != null}">
+									<img th:src="'/newscsbweb/' + ${detail.image}" class="img-fluid">
+									</th:block>
 									<div th:utext="${detail.content}"></div>
 								</div>
 						</div>

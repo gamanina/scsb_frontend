@@ -70,8 +70,8 @@
                                 <source srcset="/newscsbweb/images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
                                 <source srcset="/newscsbweb/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
                                 <img th:src="@{/images/share/kv-mask-1920.png}" alt="精采多樣的信用卡" class="imgMask"></picture>
-                            <div class="kv-img d-block d-lg-none" style="background-image:url(/images/card_img/home/kv-01-768.jpg)" title="Mobile圖片"></div>
-                            <div class="kv-img d-none d-md-block" style="background-image:url(/images/card_img/home/kv-01-1920_0.jpg)" title="table、pc圖片"></div>
+                            <div class="kv-img d-block d-lg-none" style="background-image:url(/newscsbweb/images/card_img/home/kv-01-768.jpg)" title="Mobile圖片"></div>
+                            <div class="kv-img d-none d-md-block" style="background-image:url(/newscsbweb/images/card_img/home/kv-01-1920_0.jpg)" title="table、pc圖片"></div>
                         </div>
                     	</th:block>
 	                    <th:block th:unless="${bannerList.empty}">
@@ -82,8 +82,8 @@
 	                                <source srcset="/newscsbweb/images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
 	                                <img src="/newscsbweb/images/share/kv-mask-1920.png" alt="精采多樣的信用卡" class="imgMask">
 	                            </picture>
-	                            <div class="kv-img d-none d-md-block" th:style="'background-image:url(' + ${banner.image} +')'" title="table、pc圖片"></div>
-								<div class="kv-img d-block d-lg-none" th:style="'background-image:url(' + ${banner.imageMobile} +')'" title="Mobile圖片"></div>
+	                            <div class="kv-img d-none d-md-block" th:style="'background-image:url(' + @{${banner.image}} +')'" title="table、pc圖片"></div>
+								<div class="kv-img d-block d-lg-none" th:style="'background-image:url(' + @{${banner.imageMobile}} +')'" title="Mobile圖片"></div>
 	                        </div>
 	                    </th:block>
                     </div>
@@ -289,13 +289,13 @@
                             <div class="swiper-slide cardItem" th:each="hot : ${hotsList}">
                                 <div class="card">
                                     <div th:class="'distag ' + ${hot.category}" th:text="${hot.categoryName}">旅遊活動</div>
-                                    <img on-image-load th:src="${hot.image}" class="card-img-top" th:alt="${hot.title}">
+                                    <img on-image-load th:src="@{${hot.image}}" class="card-img-top" th:alt="${hot.title}">
                                     <div class="card-body">
                                         <div class="date" th:text="${#dates.format(hot.onTime, 'yyyy/MM/dd')} + '~' + ${#dates.format(hot.offTime, 'yyyy/MM/dd')}">2021/01/01~2021/01/31</div>
                                         <h4 class="card-title" th:text="${hot.title}">東森購物就刷上海銀行信用卡</h4>
                                         <p class="card-text" th:text="${#strings.abbreviate(hot.content, 26)}">分期滿額登錄活動最高享8%現金回饋</p>
                                         <span class="more">了解詳情</span>
-                                        <a th:href="'/card/hotPage/' + ${hot.id}" class="stretched-link" th:title="${hot.title}" onclick="window.location.href = this.href">&nbsp;</a>
+                                        <a th:href="|@{/card/hotPage/}${hot.id}|" class="stretched-link" th:title="${hot.title}" onclick="window.location.href = this.href">&nbsp;</a>
                                     </div>
                                 </div>
                             </div>
@@ -351,7 +351,7 @@
                                     <th:block th:unless="${adList.empty}">
                                     <div th:each="ad : ${adList}" class="swiper-slide eventItem">
                                         <div class="card">
-                                            <img on-image-load th:src="${ad.image}" th:alt="${ad.title}" class="img-fluid w-100">
+                                            <img on-image-load th:src="@{${ad.image}}" th:alt="${ad.title}" class="img-fluid w-100">
                                             <a th:href="${ad.imageUrl}" class="stretched-link" th:title="${ad.title}" onclick="window.location.href = this.href"></a>
                                             <div class="card-overlay">
                                                 <div th:text="${#dates.format(ad.onTime, 'yyyy/MM/dd')}" class="date">2021/01/07</div>
@@ -367,7 +367,7 @@
                         	<div class="event-lister">
                             	<th:block th:if="${!newsList.empty}">
                             		<!-- FIXME -->
-	                                <a th:each="news:${newsList}" th:href="'/cardPage/' + ${news.id}" class="item-link">
+	                                <a th:each="news:${newsList}" th:href="|@{/detailPage/}${news.id}|" class="item-link">
 	                                	<span class="date" th:text="${#dates.format(news.onTime, 'YYYY/MM/dd')}">2020/06/30</span>[[${news.title}]]
 	                                </a>
                                 </th:block>

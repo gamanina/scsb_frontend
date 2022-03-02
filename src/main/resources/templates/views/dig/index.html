@@ -26,7 +26,7 @@
     <link rel="image_src" href="https://www.scsb.com.tw/newscsbweb/content/images/dig_img/share/FB.jpg">
     <link href="favicon.ico" rel="shortcut icon">
 
-    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" th:href="@{/styles/all.css}">
 
     
 
@@ -38,7 +38,7 @@
     <!--========== HEADER ==============-->
     <header class="header fixed-top">
         <button class="js-toggle-left-slidebar hamburger d-block d-lg-none" type="button"></button>
-        <div class="header-wrap" include-html="common/template_header.html"></div>
+        <div class="header-wrap" th:include-html="@{/common/template_header.html}"></div>
     </header>
     <!--========== END Header ==========-->
 
@@ -67,9 +67,9 @@
 	                        <div class="swiper-slide itemblk" th:each="banner:${bannerList}">
 	                            <a th:href="@{${banner.imageUrl}}" class="kv-link" title="開新視窗-嶄新的數位金融">&nbsp;</a>
 	                            <picture>
-	                                <source srcset="images/share/kv-mask-1024.png" media="(max-width: 767.9px)">
-	                                <source srcset="images/share/kv-mask-1280.png" media="(min-width: 960px) and (max-width: 1359.9px)">
-	                                <img src="images/share/kv-mask-1920.png" alt="嶄新的數位金融" class="imgMask">
+	                                <source th:srcset="@{/images/share/kv-mask-1024.png}" media="(max-width: 767.9px)">
+	                                <source th:srcset="@{/images/share/kv-mask-1280.png}" media="(min-width: 960px) and (max-width: 1359.9px)">
+	                                <img th:src="@{/images/share/kv-mask-1920.png}" alt="嶄新的數位金融" class="imgMask">
 	                            </picture>
 	                            <div class="kv-img d-none d-md-block" th:style="'background-image:url(' + @{${banner.image}} +')'" title="table、pc圖片"></div>
 								<div class="kv-img d-block d-lg-none" th:style="'background-image:url(' + @{${banner.imageMobile}} +')'" title="Mobile圖片"></div>
