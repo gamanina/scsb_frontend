@@ -143,9 +143,9 @@
 									<div class="list-group downloadLister announceList"
 										id="downloadTypeListTarget" th:each="detail:${detailList}">
 										<div th:switch="${detail.applicantUnitId}">
-											<div th:case="'870000'" data-type-tag="bank">
+											<div th:case="'870000'" data-type-tag="bus">
 												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
-													<div class="lCol"><figure th:class="|annTag tagClass|">銀行<br>資訊</figure></div>
+													<div class="lCol"><figure class="annTag bus">企業<br>金融</figure></div>
 													<div class="rCol">
 														<figure class="annInfo">
 															<span class="date"
@@ -230,7 +230,7 @@
 											
 											<div th:case="*" data-type-tag="bank">
 												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
-												<div class="lCol"><figure class="annTag dig">銀行<br>資訊</figure></div>
+												<div class="lCol"><figure class="annTag bank">銀行<br>資訊</figure></div>
 													<div class="rCol">
 														<figure class="annInfo">
 															<span class="date"
