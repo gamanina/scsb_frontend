@@ -21389,14 +21389,32 @@ hr.dashed {
 .distag.shopping {
   background-color: #e95504;
 }
-.distag.loan {
-  background-color: #d15b9c;
+.distag.cdcard {
+  background-color: #8f36e7;
 }
 .distag.installment {
-  background-color: #8f36e7;
+  background-color: #d15b9c;
 }
 .distag.mobilepay {
   background-color: #368fe7;
+}
+.distag.bank {
+  background-color: #e7373c;
+}
+.distag.bus {
+  background-color: #54ab00;
+}
+.distag.ind {
+  background-color: #e95504;
+}
+.distag.dep {
+  background-color: #d15b9c;
+}
+.distag.fund {
+  background-color: #368fe7;
+}
+.distag.dig {
+  background-color: #f9be00;
 }
 
 .announceList .list-item, .excrateList .list-item {

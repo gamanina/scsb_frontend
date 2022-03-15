@@ -119,7 +119,7 @@
 												class="img-fluid" alt="*">
 										</div>
 										<div class="inner-tag">
-											<div class="distag bonus">銀行資訊</div>
+											<div th:class="|distag ${tagClass}|" th:text="${sheetTag}">銀行資訊</div>
 											<div class="date" th:text="${#dates.format(detail.offTime, 'YYYY/MM/dd')}+止"></div>
 											
 										</div>

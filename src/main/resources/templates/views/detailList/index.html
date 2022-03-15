@@ -142,10 +142,10 @@
 								<th:block th:if="${!detailList.empty}">
 									<div class="list-group downloadLister announceList"
 										id="downloadTypeListTarget" th:each="detail:${detailList}">
-										<div th:switch="${detail.applicantUnit}">
-											<div th:case="'企業金融'" data-type-tag="bank">
+										<div th:switch="${detail.applicantUnitId}">
+											<div th:case="'870000'" data-type-tag="bank">
 												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
-													<div class="lCol"><figure class="annTag bus">銀行<br>資訊</figure></div>
+													<div class="lCol"><figure th:class="|annTag tagClass|">銀行<br>資訊</figure></div>
 													<div class="rCol">
 														<figure class="annInfo">
 															<span class="date"
@@ -157,7 +157,7 @@
 												</a>
 											</div>
 											
-											<div th:case="'個人金融'" data-type-tag="ind">
+											<div th:case="'890000'" data-type-tag="ind">
 												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
 													<div class="lCol"><figure class="annTag ind">個人<br>金融</figure></div>
 													<div class="rCol">
@@ -171,7 +171,7 @@
 												</a>
 											</div>
 											
-											<div th:case="'台外幣存匯'" data-type-tag="dep">
+											<div th:case="'840000'" data-type-tag="dep">
 												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
 													<div class="lCol"><figure class="annTag dep">台外幣<br>存匯</figure></div>
 													<div class="rCol">
@@ -185,7 +185,7 @@
 												</a>
 											</div>
 											
-											<div th:case="'信用卡'" data-type-tag="card">
+											<div th:case="'910000'" data-type-tag="card">
 												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
 													<div class="lCol"><figure class="annTag cdcard">信用卡</figure></div>
 													<div class="rCol">
@@ -199,7 +199,7 @@
 												</a>
 											</div>
 											
-											<div th:case="'財富管理'" data-type-tag="fund">
+											<div th:case="'880000'" data-type-tag="fund">
 												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
 													<div class="lCol"><figure class="annTag fund">財富<br>管理</figure></div>
 													<div class="rCol">
@@ -213,7 +213,7 @@
 												</a>
 											</div>
 											
-											<div th:case="'數位金融'" data-type-tag="dig">
+											<div th:case="'850000'" data-type-tag="dig">
 												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
 													<div class="lCol"><figure class="annTag dig">數位<br>金融</figure></div>
 													<div class="rCol">
@@ -230,7 +230,7 @@
 											
 											<div th:case="*" data-type-tag="bank">
 												<a href="#!" class="list-item" title="防範詐騙關懷提醒">
-												<div class="lCol"><figure class="annTag dig">企業<br>金融</figure></div>
+												<div class="lCol"><figure class="annTag dig">銀行<br>資訊</figure></div>
 													<div class="rCol">
 														<figure class="annInfo">
 															<span class="date"

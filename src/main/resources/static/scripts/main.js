@@ -48,7 +48,9 @@ var filterTabBySelector = function(s) {
     var e = document.querySelectorAll("#downloadTypeListTarget > div");
     
     e.forEach(function(e, t) {
-        "" == s.value ? e.classList.remove("d-none") : -1 != String(e.dataset.typeTag).split("|").indexOf(s.value) ? (e.classList.remove("d-none"),
+		var e1 = e.children;
+		e1 = e1.length > 0 ? e1[0] : e;
+        "" == s.value ? e.classList.remove("d-none") : -1 != String(e1.dataset.typeTag).split("|").indexOf(s.value) ? (e.classList.remove("d-none"),
         e.classList.add("d-block")) : (e.classList.add("d-none"),
         e.classList.remove("d-block"))
     })

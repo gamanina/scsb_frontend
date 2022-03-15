@@ -73,9 +73,9 @@ public class Constants
 		map.put("bonus", "紅利點數");
 		map.put("travel", "旅遊活動");
 		map.put("shopping", "網購活動");
-		map.put("loan", "預借現金");
 		map.put("installment", "分期付款");
 		map.put("mobilepay", "行動支付");
+		map.put("cdcard", "卡片優惠");
 		CARD_SWIPE_HOT_CATEGORY_MAP = Collections.unmodifiableMap(map);
 		
 		map = new LinkedHashMap<String, String>();

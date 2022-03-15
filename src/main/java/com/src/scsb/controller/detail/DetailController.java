@@ -53,7 +53,30 @@ public class DetailController {
 			model.addAttribute("menuIndex", "C01");
 		}
 		
-		// TODO 尚未實作表單來自哪個單位, 暫時顯示同樣的tag
+		switch (detail.getApplicantUnitId()) {
+			case "870000":// 企業金融
+				model.addAttribute("tagClass", "bus");
+				break;
+			case "890000":// 個人金融
+				model.addAttribute("tagClass", "ind");
+				break;
+			case "840000":// 台外幣存匯
+				model.addAttribute("tagClass", "dep");
+				break;
+			case "910000":// 信用卡部
+				model.addAttribute("tagClass", "cdcard");
+				break;
+			case "880000":// 財富管理部
+				model.addAttribute("tagClass", "fund");
+				break;
+			case "850000":// 數位金融部門
+				model.addAttribute("tagClass", "dig");
+				break;
+			default:// 其他單位為銀行資訊
+				model.addAttribute("tagClass", "bank");
+				break;
+		}
+		model.addAttribute("sheetTag", detail.getApplicantUnit());
 		
 		return "views/detail/index";
 	}
