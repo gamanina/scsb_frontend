@@ -141,10 +141,10 @@
                                 <div data-type-tag="bank">
                                     <a href="#!" class="list-item" title="防範詐騙關懷提醒">
                                         <div class="lCol"><figure class="annTag bank">本行<br>公告</figure></div>
-                                          <th:block th:if="${!announceList.empty}">
+                                          <th:block th:if="${announceList !=null}">
                                             <div class="rCol" th:each="announce:${announceList}"><figure class="annInfo"><span class="date" th:text="${#dates.format(announce.createTime, 'YYYY/MM/dd')}"></span><div th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${announce.id})} + '\''">[[${announce.title}]]</div></figure></div>
                                           </th:block>
-                                          <th:block th:unless="${!announceList.empty}">
+                                          <th:block th:unless="${announceList!=null}">
                                             <div class="rCol"><figure class="annInfo"><span class="date">2021/07/07</span>公告新版【新臺幣存款開戶及各項服務約定書】、【外匯...</figure></div>
                                           </th:block>
                                     </a>
@@ -152,10 +152,10 @@
                                 <div data-type-tag="bus">
                                     <a href="#!" class="list-item" title="防範詐騙關懷提醒">
                                         <div class="lCol"><figure class="annTag bus">最新<br>活動</figure></div>
-                                        <th:block th:if="${!activityList.empty}">
+                                        <th:block th:if="${activityList!=null}">
                                             <div class="rCol" th:each="activity:${activityList}"><figure class="annInfo"><span class="date" th:text="${#dates.format(activity.createTime, 'YYYY/MM/dd')}">2021/07/07</span><div th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${activity.id})} + '\''">[[${activity.title}]]</div></figure></div>
                                           </th:block>
-                                          <th:block th:unless="${!activityList.empty}">
+                                          <th:block th:unless="${activityList!=null}">
                                             <div class="rCol"><figure class="annInfo"><span class="date">2021/07/06</span>Cloud bank 發春食記 送你Uber eats 加菜金</figure></div>
                                         </th:block>
                                     </a>
@@ -163,10 +163,10 @@
                                 <div data-type-tag="ind">
                                     <a href="#!" class="list-item" title="轉帳限額大升級!!">
                                         <div class="lCol"><figure class="annTag ind">中獎<br>名單</figure></div>
-                                        <th:block th:if="${!winnerList.empty}">
+                                        <th:block th:if="${winnerList!=null}">
                                             <div class="rCol" th:each="winner:${winnerList}"><figure class="annInfo"><span class="date" th:text="${#dates.format(winner.createTime, 'YYYY/MM/dd')}">2021/07/07</span><div th:onclick="'window.location.href = \'' + @{/detailPage/{id}(id=${winner.id})} + '\''">[[${winner.title}]]</div></figure></div>
                                           </th:block>
-                                        <th:block th:unless="${!winnerList.empty}">
+                                        <th:block th:unless="${winnerList!=null}">
                                         <div class="rCol"><figure class="annInfo"><span class="date">2021/07/05</span>「聰明換匯大贏家」109/12-110/1網銀行銷活動中獎名單「聰明換匯大贏家」109/12-110/1網銀行銷活動中獎名單</figure></div>
                                         </th:block>
                                     </a>

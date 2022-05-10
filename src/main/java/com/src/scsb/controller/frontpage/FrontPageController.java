@@ -33,10 +33,10 @@ public class FrontPageController {
 		System.out.println(indexBannerList.toString());
 		model.addAttribute("indexBannerList",indexBannerList);
 		model.addAttribute("bannerList", bannerList);
-		model.addAttribute("announceList", announceList);
-		model.addAttribute("activityList",activityList);
+		model.addAttribute("announceList", announceList.size()>0?announceList.get(0):null);
+		model.addAttribute("activityList",activityList.size()>0?activityList.get(0):null);
 		model.addAttribute("adList", adList);
-		model.addAttribute("winnerList", winnerList);
+		model.addAttribute("winnerList", winnerList.size()>0?winnerList.get(0):null);
 		return "views/FrontPage/index";
 	}
 	

@@ -14,7 +14,7 @@ public interface SheetRepository extends JpaRepository<Sheet, String>, JpaSpecif
 	@Query(value = "SELECT * FROM SCSB_SHEET WHERE ON_TIME < ?1 AND OFF_TIME > ?1 AND TYPE = ?2 AND (STATUS = ?3 OR STATUS = ?4)", nativeQuery = true)
 	List<Sheet> getIndexBanners(LocalDateTime time, String type, String processing, String passed);
 	
-	@Query(value = "SELECT * FROM SCSB_SHEET WHERE ON_TIME < ?1 AND OFF_TIME > ?1 AND TYPE = ?2 AND STATUS = ?3 ORDER BY MODIFY_TIME DESC", nativeQuery = true)
+	@Query(value = "SELECT * FROM SCSB_SHEET WHERE ON_TIME < ?1 AND OFF_TIME > ?1 AND TYPE = ?2 AND STATUS = ?3  ORDER BY MODIFY_TIME DESC", nativeQuery = true)
 	List<Sheet> getListByTypeAndStatus(LocalDateTime time, String type, String passed);
 	
 	@Query(value = "SELECT * FROM SCSB_SHEET WHERE ON_TIME < ?1 AND OFF_TIME > ?1 AND TYPE = 1 AND STATUS = 1 AND ROWNUM <= 3 ORDER BY MODIFY_TIME DESC", nativeQuery = true)

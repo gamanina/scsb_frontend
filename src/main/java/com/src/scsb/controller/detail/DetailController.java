@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +29,22 @@ public class DetailController {
 		List<Sheet> detailList = sheetService.getDetail(now, id);
 		Sheet detail = detailList.isEmpty() ? null : detailList.get(0);
 		
-		System.out.println(detailList.toString());
+		if (StringUtils.isNotEmpty(detail.getFile())) {
+			detail.setFile1Name(detail.getFile().split("/")[5]);
+		}
+		
+		if (StringUtils.isNotEmpty(detail.getFile2())) {
+			detail.setFile2Name(detail.getFile().split("/")[5]);
+		}
+		if (StringUtils.isNotEmpty(detail.getFile3())) {
+			detail.setFile3Name(detail.getFile().split("/")[5]);
+		}
+		if (StringUtils.isNotEmpty(detail.getFile4())) {
+			detail.setFile4Name(detail.getFile().split("/")[5]);
+		}
+		if (StringUtils.isNotEmpty(detail.getFile5())) {
+			detail.setFile5Name(detail.getFile().split("/")[5]);
+		}
 		
 		model.addAttribute("detail", detail != null ? detail : Collections.emptyMap());
 		

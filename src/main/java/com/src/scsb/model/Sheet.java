@@ -98,6 +98,16 @@ public class Sheet
 	private String imageName;
 	@Transient
 	private String fileName;
+	@Transient
+	private String file1Name;
+	@Transient
+	private String file2Name;
+	@Transient
+	private String file3Name;
+	@Transient
+	private String file4Name;
+	@Transient
+	private String file5Name;
 	
 	
 }
